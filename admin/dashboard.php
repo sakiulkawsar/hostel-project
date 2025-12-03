@@ -45,7 +45,7 @@ check_login();
 						<div class="row">
 							<div class="col-md-12">
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-md-6">
 										<div class="panel panel-default">
 											<div class="panel-body bk-primary text-light">
 												<div class="stat-panel text-center">
@@ -66,7 +66,7 @@ $stmt->close();
 											<a href="manage-students.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-									<div class="col-md-4">
+									<div class="col-md-6">
 										<div class="panel panel-default">
 											<div class="panel-body bk-success text-light">
 												<div class="stat-panel text-center">
@@ -85,25 +85,7 @@ $stmt1->close();
 											<a href="manage-rooms.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-									<div class="col-md-4">
-										<div class="panel panel-default">
-											<div class="panel-body bk-info text-light">
-												<div class="stat-panel text-center">
-<?php
-$result2 ="SELECT count(*) FROM courses ";
-$stmt2 = $mysqli->prepare($result2);
-$stmt2->execute();
-$stmt2->bind_result($count2);
-$stmt2->fetch();
-$stmt2->close();
-?>												
-													<div class="stat-panel-number h1 "><?php echo $count2;?></div>
-													<div class="stat-panel-title text-uppercase">Total Courses</div>
-												</div>
-											</div>
-											<a href="manage-courses.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
+								
 									
 								</div>
 
@@ -114,7 +96,7 @@ $stmt2->close();
 				<div class="row">
 							<div class="col-md-12">
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-md-6">
 										<div class="panel panel-default">
 											<div class="panel-body bk-info text-light">
 												<div class="stat-panel text-center">
@@ -135,7 +117,7 @@ $stmt->close();
 											<a href="all-complaints.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-									<div class="col-md-4">
+									<div class="col-md-6">
 										<div class="panel panel-default">
 											<div class="panel-body bk-danger text-light">
 												<div class="stat-panel text-center">
@@ -154,25 +136,7 @@ $stmt1->close();
 											<a href="new-complaints.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-									<div class="col-md-4">
-										<div class="panel panel-default">
-											<div class="panel-body bk-warning text-light">
-												<div class="stat-panel text-center">
-<?php
-$result2 ="select count(*) from complaints where complaintStatus='In Process'";
-$stmt2 = $mysqli->prepare($result2);
-$stmt2->execute();
-$stmt2->bind_result($count2);
-$stmt2->fetch();
-$stmt2->close();
-?>												
-													<div class="stat-panel-number h1 "><?php echo $count2;?></div>
-													<div class="stat-panel-title text-uppercase">In Process Complaints</div>
-												</div>
-											</div>
-											<a href="inprocess-complaints.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
+								
 									
 								</div>
 							</div>
@@ -185,26 +149,7 @@ $stmt2->close();
 							<div class="col-md-12">
 								<div class="row">
 					
-									<div class="col-md-4">
-										<div class="panel panel-default">
-											<div class="panel-body bk-success text-light">
-												<div class="stat-panel text-center">
-<?php
-$result1 ="select count(*) from complaints where complaintStatus='Closed'";
-$stmt1 = $mysqli->prepare($result1);
-$stmt1->execute();
-$stmt1->bind_result($count1);
-$stmt1->fetch();
-$stmt1->close();
-?>												
-													<div class="stat-panel-number h1 "><?php echo $count1;?></div>
-													<div class="stat-panel-title text-uppercase">Closed Complaints </div>
-												</div>
-											</div>
-											<a href="closed-complaints.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="col-md-4">
+									<div class="col-md-6">
 										<div class="panel panel-success">
 											<div class="panel-body bk-info text-light">
 												<div class="stat-panel text-center">
