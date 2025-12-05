@@ -75,7 +75,18 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 											<th>Action</th>
 										</tr>
 									</thead>
-									
+									<tfoot>
+										<tr>
+											<th>Sno.</th>
+											<th>Student Name</th>
+											<th>Reg no</th>
+											<th>Room no  </th>
+											<th>Seater </th>
+											<th>Staying From </th>
+											<th>Feedback Date </th>
+											<th>Action</th>
+										</tr>
+									</tfoot>
 									<tbody>
 <?php	
 $aid=$_SESSION['id'];
