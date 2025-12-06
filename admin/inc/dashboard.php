@@ -50,13 +50,20 @@ check_login();
 											<div class="panel-body bk-primary text-light">
 												<div class="stat-panel text-center">
 
+													<?php
+													$result = "SELECT count(*) FROM registration ";
+													$stmt = $mysqli->prepare($result);
+													$stmt->execute();
+													$stmt->bind_result($count);
+													$stmt->fetch();
+													$stmt->close();
+													?>
 
-
-													<div class="stat-panel-number h1 "></div>
+													<div class="stat-panel-number h1 "><?php echo $count; ?></div>
 													<div class="stat-panel-title text-uppercase"> Students</div>
 												</div>
 											</div>
-											<a href="" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-students.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -83,6 +90,9 @@ check_login();
 								</div>
 
 
+
+
+
 								<div class="row">
 									<div class="col-md-12">
 										<div class="row">
@@ -91,9 +101,16 @@ check_login();
 													<div class="panel-body bk-info text-light">
 														<div class="stat-panel text-center">
 
-														
+															<?php
+															$result = "SELECT count(*) FROM complaints ";
+															$stmt = $mysqli->prepare($result);
+															$stmt->execute();
+															$stmt->bind_result($count);
+															$stmt->fetch();
+															$stmt->close();
+															?>
 
-															<div class="stat-panel-number h1 "></div>
+															<div class="stat-panel-number h1 "><?php echo $count; ?></div>
 															<div class="stat-panel-title text-uppercase"> Registered Complaints</div>
 														</div>
 													</div>
@@ -104,8 +121,15 @@ check_login();
 												<div class="panel panel-default">
 													<div class="panel-body bk-danger text-light">
 														<div class="stat-panel text-center">
-														
-															<div class="stat-panel-number h1 "></div>
+															<?php
+															$result1 = "select count(*) from complaints where complaintStatus is null";
+															$stmt1 = $mysqli->prepare($result1);
+															$stmt1->execute();
+															$stmt1->bind_result($count1);
+															$stmt1->fetch();
+															$stmt1->close();
+															?>
+															<div class="stat-panel-number h1 "><?php echo $count1; ?></div>
 															<div class="stat-panel-title text-uppercase">New Complaints </div>
 														</div>
 													</div>
@@ -124,8 +148,15 @@ check_login();
 												<div class="panel panel-success">
 													<div class="panel-body bk-info text-light">
 														<div class="stat-panel text-center">
-															
-															<div class="stat-panel-number h1 "></div>
+															<?php
+															$result2 = "select count(*) from feedback";
+															$stmt2 = $mysqli->prepare($result2);
+															$stmt2->execute();
+															$stmt2->bind_result($count2);
+															$stmt2->fetch();
+															$stmt2->close();
+															?>
+															<div class="stat-panel-number h1 "><?php echo $count2; ?></div>
 															<div class="stat-panel-title text-uppercase">Total Feedbacks</div>
 														</div>
 													</div>
