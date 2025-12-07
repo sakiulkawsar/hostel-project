@@ -5,7 +5,6 @@ include('includes/checklogin.php');
 check_login();
 
 
-
 ?>
 <!doctype html>
 <html lang="en" class="no-js">
@@ -26,18 +25,20 @@ check_login();
 	<link rel="stylesheet" href="css/fileinput.min.css">
 	<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
 	<link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
-	<?php include('includes/header.php');?>
+	<?php include('includes/header.php'); ?>
 
 	<div class="ts-main-content">
-			<?php include('includes/sidebar.php');?>
+		<?php include('includes/sidebar.php'); ?>
 		<div class="content-wrapper">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						<h2 class="page-title" style="margin-top: 4%">Manage Rooms</h2>
+						<h2 class="page-title" style="margin-top:4%">Manage Registred Students</h2>
 						<div class="panel panel-default">
 							<div class="panel-heading">All Room Details</div>
 							<div class="panel-body">
@@ -45,51 +46,54 @@ check_login();
 									<thead>
 										<tr>
 											<th>Sno.</th>
-										
-											<th>Seater</th>
-											<th>Room No.</th>
-											<th>Fees (PM) </th>
-
-											<th>Posting Date  </th>
+											<th>Student Name</th>
+											<th>Reg no</th>
+											<th>Contact no </th>
+											<th>room no </th>
+											<th>Seater </th>
+											<th>Staying From </th>
 											<th>Action</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
 											<th>Sno.</th>
-											<th>Seater</th>
-											<th>Room No.</th>
-										
-											<th>Fees (PM) </th>
-											<th>Posting Date  </th>
+											<th>Student Name</th>
+											<th>Reg no</th>
+											<th>Contact no </th>
+											<th>Room no </th>
+											<th>Seater </th>
+											<th>Staying From </th>
 											<th>Action</th>
 										</tr>
 									</tfoot>
 									<tbody>
 
-<tr><td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></i></a>&nbsp;&nbsp;
 
-										</tr>
-									
-											
-										
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>
+
+											</tr>
+
+
+
 									</tbody>
 								</table>
 
-								
+
 							</div>
 						</div>
 
-					
+
 					</div>
 				</div>
 
-			
+
 
 			</div>
 		</div>

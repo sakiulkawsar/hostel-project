@@ -1,10 +1,15 @@
 <?php
 session_start();
+if(isset($_SESSION['email'])){
+	header("Location: dashboard.php");
+}
+
 include('includes/config.php');
 if(isset($_POST['login']))
 {
 $username=$_POST['username'];
 $password=$_POST['password'];
+$password = md5($password);
 $stmt=$mysqli->prepare("SELECT username,email,password,id FROM admin WHERE (userName=?|| email=?) and password=? ");
 				$stmt->bind_param('sss',$username,$username,$password);
 				$stmt->execute();

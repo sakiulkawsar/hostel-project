@@ -1,33 +1,11 @@
 <?php session_start();
-error_reporting(0);
+
 include('includes/config.php');
 include('includes/checklogin.php');
 check_login();
 //code for add courses
-if(isset($_POST['submit']))
-{
-$seater=$_POST['seater'];
-$roomno=$_POST['rmno'];
-$fees=$_POST['fee'];
-$sql="SELECT room_no FROM rooms where room_no=?";
-$stmt1 = $mysqli->prepare($sql);
-$stmt1->bind_param('i',$roomno);
-$stmt1->execute();
-$stmt1->store_result(); 
-$row_cnt=$stmt1->num_rows;;
-if($row_cnt>0)
-{
-echo"<script>alert('Room alreadt exist');</script>";
-}
-else
-{
-$query="insert into  rooms (seater,room_no,fees) values(?,?,?)";
-$stmt = $mysqli->prepare($query);
-$rc=$stmt->bind_param('iii',$seater,$roomno,$fees);
-$stmt->execute();
-echo"<script>alert('Room has been added successfully');</script>";
-}
-}
+if(isset($_POST['login']))
+{}
 ?>
 <!doctype html>
 <html lang="en" class="no-js">
@@ -67,10 +45,8 @@ echo"<script>alert('Room has been added successfully');</script>";
 								<div class="panel panel-default">
 									<div class="panel-heading">Add a Room</div>
 									<div class="panel-body">
-									<?php if(isset($_POST['submit']))
-{ ?>
-<p style="color: red"><?php echo htmlentities($_SESSION['msg']); ?><?php echo htmlentities($_SESSION['msg']=""); ?></p>
-<?php } ?>
+									
+
 										<form method="post" class="form-horizontal">
 											
 											<div class="hr-dashed"></div>

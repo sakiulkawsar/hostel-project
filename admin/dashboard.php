@@ -63,19 +63,12 @@ check_login();
 										<div class="panel panel-default">
 											<div class="panel-body bk-success text-light">
 												<div class="stat-panel text-center">
-													<?php
-													$result1 = "SELECT count(*) FROM rooms ";
-													$stmt1 = $mysqli->prepare($result1);
-													$stmt1->execute();
-													$stmt1->bind_result($count1);
-													$stmt1->fetch();
-													$stmt1->close();
-													?>
-													<div class="stat-panel-number h1 "><?php echo $count1; ?></div>
+												
+													<div class="stat-panel-number h1 "></div>
 													<div class="stat-panel-title text-uppercase">Total Rooms </div>
 												</div>
 											</div>
-											<a href="manage-rooms.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 
@@ -97,7 +90,7 @@ check_login();
 															<div class="stat-panel-title text-uppercase"> Registered Complaints</div>
 														</div>
 													</div>
-													<a href="all-complaints.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
+													<a href="" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
 												</div>
 											</div>
 											<div class="col-md-6">
@@ -109,7 +102,7 @@ check_login();
 															<div class="stat-panel-title text-uppercase">New Complaints </div>
 														</div>
 													</div>
-													<a href="new-complaints.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
+													<a href="" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 												</div>
 											</div>
 										</div>
@@ -129,7 +122,7 @@ check_login();
 															<div class="stat-panel-title text-uppercase">Total Feedbacks</div>
 														</div>
 													</div>
-													<a href="feedbacks.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
+													<a href="" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 												</div>
 											</div>
 
@@ -144,6 +137,7 @@ check_login();
 					</div>
 				</div>
 			</div>
+		
 
 			<!-- Loading Scripts -->
 			<script src="js/jquery.min.js"></script>
