@@ -61,7 +61,7 @@
                                 <a class="nav-item" href="contacts.php" data-page="home">Contract</a>
                             </li>
                             <li class="header_nav-list_item">
-                                <a class="nav-item" target="_blank" href="admin/index.php" data-page="home">Admin</a>
+                                <a class="nav-item" target="_blank" href="admin/index.php" data-page="home">Login</a>
                                
                             </li>
                         </ul>
