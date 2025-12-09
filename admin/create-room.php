@@ -6,9 +6,10 @@ check_login();
 //code for add courses
 if(isset($_POST['submit']))
 {
-$seater=$_POST['seater'];
-$roomno=$_POST['rmno'];
-$fees=$_POST['fee'];
+// $seater=$_POST['seater'];
+// $roomno=$_POST['rmno'];
+// $fees=$_POST['fee'];
+extract($_POST);
 $sql="SELECT room_no FROM rooms where room_no=?";
 $stmt1 = $mysqli->prepare($sql);
 $stmt1->bind_param('i',$roomno);

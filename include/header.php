@@ -70,18 +70,12 @@ function navActive($fileName)
                         <a class="nav-item <?= navActive('contacts.php') ?>" href="contacts.php">Contact</a>
                     </li>
 
-                    <?php if (!empty($_SESSION['id'])) : ?>
-                        <!-- <li class="header_nav-list_item">
-                            <a class="nav-item <?= navActive('dashboard.php') ?>" href="dashboard.php">Dashboard</a>
-                        </li> -->
-                        <!-- <li class="header_nav-list_item">
-                             <a class="nav-item" href="logout.php">Logout</a> -->
-                        <!-- </li>  -->
-                    <?php else : ?>
+                  
+                  
                         <li class="header_nav-list_item">
-                            <a class="nav-item" href="/admin">Login</a>
+                            <a class="nav-item" href="admin/index.php">Login</a>
                         </li>
-                    <?php endif; ?>
+                  
 
                 </ul>
             </nav>

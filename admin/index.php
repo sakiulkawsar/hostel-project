@@ -39,8 +39,9 @@ include('includes/config.php');
 <?php
 if(isset($_POST['login']))
 {
-$username=$_POST['username'];
-$password=$_POST['password'];
+	extract($_POST);
+// $username=$_POST['username'];
+// $password=$_POST['password'];
 $password= md5($password);
 $stmt=$mysqli->prepare("SELECT username,email,password,id FROM admin WHERE (userName=?|| email=?) and password=? ");
 				$stmt->bind_param('sss',$username,$username,$password);
