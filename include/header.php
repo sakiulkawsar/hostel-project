@@ -71,15 +71,15 @@ function navActive($fileName)
                     </li>
 
                     <?php if (!empty($_SESSION['id'])) : ?>
-                        <li class="header_nav-list_item">
+                        <!-- <li class="header_nav-list_item">
                             <a class="nav-item <?= navActive('dashboard.php') ?>" href="dashboard.php">Dashboard</a>
-                        </li>
-                        <li class="header_nav-list_item">
-                            <a class="nav-item" href="logout.php">Logout</a>
-                        </li>
+                        </li> -->
+                        <!-- <li class="header_nav-list_item">
+                             <a class="nav-item" href="logout.php">Logout</a> -->
+                        <!-- </li>  -->
                     <?php else : ?>
                         <li class="header_nav-list_item">
-                            <a class="nav-item <?= navActive('user-login.php') ?>" href="user-login.php" target="_blank">Login</a>
+                            <a class="nav-item" href="/admin">Login</a>
                         </li>
                     <?php endif; ?>
 
