@@ -17,10 +17,10 @@
 				<li><a href=""><i class="fa fa-users" style="color: #fff;"></i>Manage Students</a></li>
 						<li><a href="#"><i class="fa fa-files-o" style="color: #fff;"></i> Complaints</a>
 					<ul>
-						<li><a href="">New</a></li>
-						<li><a href="">In Process</a></li>
-						<li><a href="">Closed</a></li>
-						<li><a href="">All</a></li>
+						<li><a href="new-complaints.php">New</a></li>
+						<li><a href="inprocess-complaints.php">In Process</a></li>
+						<li><a href="closed-complaints.php">Closed</a></li>
+						<li><a href="all-complaints.php">All</a></li>
 					</ul>
 				</li>
 
