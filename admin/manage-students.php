@@ -4,6 +4,17 @@ include('includes/config.php');
 // include('includes/checklogin.php');
 // check_login();
 
+if(isset($_GET['del']))
+{
+	$id=intval($_GET['del']);
+	$adn="delete from registration where regNo=?";
+		$stmt= $mysqli->prepare($adn);
+		$stmt->bind_param('i',$id);
+        $stmt->execute();
+        $stmt->close();	   
+
+
+}
 ?>
 <!doctype html>
 <html lang="en" class="no-js">
@@ -15,7 +26,7 @@ include('includes/config.php');
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
-	<title>All Complaints</title>
+	<title>Manage Rooms</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
@@ -47,36 +58,41 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						<h2 class="page-title" style="margin-top:4%">All Complaints</h2>
+						<h2 class="page-title" style="margin-top:4%">Manage Registred Students</h2>
 						<div class="panel panel-default">
-							<div class="panel-heading">Complaint Details</div>
+							<div class="panel-heading">All Room Details</div>
 							<div class="panel-body">
 								<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
 									<thead>
 										<tr>
 											<th>Sno.</th>
-											<th>Complaint Number</th>
-											<th>Complaint Type</th>
-											<th>Complaint Status</th>
-											<th>Complaint Reg. Date</th>
+											<th>Student Name</th>
+											<th>Reg no</th>
+											<th>Contact no </th>
+											<th>room no  </th>
+											<th>Seater </th>
+											<th>Staying From </th>
 											<th>Action</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
 											<th>Sno.</th>
-											<th>Complaint Number</th>
-											<th>Complaint Type</th>
-											<th>Complaint Status</th>
-											<th>Complaint Reg. Date</th>
+											<th>Student Name</th>
+											<th>Reg no</th>
+											<th>Contact no </th>
+											<th>Room no  </th>
+											<th>Seater </th>
+											<th>Staying From </th>
 											<th>Action</th>
 										</tr>
 									</tfoot>
 									<tbody>
 <?php	
 $aid=$_SESSION['id'];
-$ret="select * from complaints";
+$ret="select * from registration";
 $stmt= $mysqli->prepare($ret) ;
+//$stmt->bind_param('i',$aid);
 $stmt->execute() ;//ok
 $res=$stmt->get_result();
 $cnt=1;
@@ -84,21 +100,15 @@ while($row=$res->fetch_object())
 	  {
 	  	?>
 <tr><td><?php echo $cnt;;?></td>
-<td><?php echo $row->ComplainNumber;?></td>
-<td><?php echo $row->complaintType;?></td>
-<td><?php $cstatus=$row->complaintStatus;
-if($cstatus==''):
-	echo "New";
-else:
-echo $cstatus;
-endif;	
-
-?></td>
-<td><?php echo $row->registrationDate;?></td>
-
+<td><?php echo $row->firstName;?><?php echo $row->middleName;?><?php echo $row->lastName;?></td>
+<td><?php echo $row->regno;?></td>
+<td><?php echo $row->contactno;?></td>
+<td><?php echo $row->roomno;?></td>
+<td><?php echo $row->seater;?></td>
+<td><?php echo $row->stayfrom;?></td>
 <td>
-<a href="complaint-details.php?cid=<?php echo $row->id;?>" title="View Full Details"><i class="fa fa-desktop"></i></a>&nbsp;&nbsp;
-</td>
+<a href="student-details.php?regno=<?php echo $row->regno;?>" title="View Full Details"><i class="fa fa-desktop"></i></a>&nbsp;&nbsp;
+<a href="manage-students.php?del=<?php echo $row->regno;?>" title="Delete Record" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i></a></td>
 										</tr>
 									<?php
 $cnt=$cnt+1;
