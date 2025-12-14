@@ -40,15 +40,7 @@
                             <p class="number-label">Consequat interdum varius sit amet mattis vulputate enim nulla</p>
                         </li>
                     </ul>
-                    <div class="about_benefits-video" data-aos="fade-in">
-                        <picture>
-                            <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                            <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
-                        </picture>
-                        <a class="video-play d-inline-flex align-items-center justify-content-center" href="#">
-                            <i class="icon-play icon"></i>
-                        </a>
-                    </div>
+                   
                 </div>
             </section>
             <!-- benefits section end -->
@@ -59,7 +51,7 @@
                     <div class="rooms_header d-sm-flex justify-content-between align-items-center">
                         <h2 class="rooms_header-title" data-aos="fade-right">Hostel rooms</h2>
                         <div class="wrapper" data-aos="fade-left">
-                            <a class="btn theme-element theme-element--light" href="rooms.html">View all rooms</a>
+                          <h4>View all rooms</h4>
                         </div>
                     </div>
                     <ul class="rooms_list d-md-flex flex-wrap">
@@ -67,11 +59,11 @@
                             <div class="item-wrapper d-md-flex flex-column">
                                 <div class="media">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="img/download9.jfif" srcset="img/download9.jfif" />
+                                        <img class="lazy" data-src="img/download9.jfif" src="img/download9.jfif" alt="media" />
                                     </picture>
                                     <span class="media_label media_label--pricing">
-                                        <span class="price h4">$18</span>
+                                        <span class="price h4">300</span>
                                         / 1 night
                                     </span>
                                 </div>
@@ -98,11 +90,11 @@
                             <div class="item-wrapper d-md-flex flex-column">
                                 <div class="media">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="img/download8.jfif" srcset="img/download8.jfif" />
+                                        <img class="lazy" data-src="img/download8.jfif" src="img/download8.jfif" alt="media" />
                                     </picture>
                                     <span class="media_label media_label--pricing">
-                                        <span class="price h4">$35</span>
+                                        <span class="price h4">500</span>
                                         / 1 night
                                     </span>
                                 </div>
@@ -129,11 +121,11 @@
                             <div class="item-wrapper d-md-flex flex-column">
                                 <div class="media">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="img/download7.jfif" srcset="img/download7.jfif" />
+                                        <img class="lazy" data-src="img/download7.jfif" src="img/download7.jfif" alt="media" />
                                     </picture>
                                     <span class="media_label media_label--pricing">
-                                        <span class="price h4">$99</span>
+                                        <span class="price h4">1000</span>
                                         / 1 night
                                     </span>
                                 </div>
@@ -322,9 +314,9 @@
                         </div>
                     </div>
                     <div class="about_stages-media col-xl-6" data-aos="fade-in">
-                        <picture>
-                            <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                            <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                       <picture style="width:500px; height:500px; margin:50px; display:block; background:#f2f2f2;">
+                            <source data-srcset="img/images11.jfif" srcset="img/" />
+                            <img class="lazy" data-src="img/" src="img/" alt="media" />
                         </picture>
                     </div>
                 </div>
@@ -520,8 +512,8 @@
                     <div class="about_footer-block about_footer-block--quote d-md-flex align-items-center">
                         <div class="media" data-aos="fade-right">
                             <picture>
-                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                <source data-srcset="img/images12.jfif" srcset="img/images12.jfif" />
+                                <img class="lazy" data-src="img/images12.jfif" src="img/images12.jfif" alt="media" />
                             </picture>
                         </div>
                         <div class="main">

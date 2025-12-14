@@ -60,9 +60,7 @@ function navActive($fileName)
                     <li class="header_nav-list_item">
                         <a class="nav-item <?= navActive('rooms.php') ?>" href="rooms.php">Rooms</a>
                     </li>
-                    <li class="header_nav-list_item">
-                        <a class="nav-item <?= navActive('news.php') ?>" href="news.php">News</a>
-                    </li>
+                
                     <li class="header_nav-list_item">
                         <a class="nav-item <?= navActive('gallery.php') ?>" href="gallery.php">Gallery</a>
                     </li>

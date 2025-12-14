@@ -56,12 +56,12 @@
                         <figure class="gallery_masonry-item col-sm-6 col-lg-4" data-groups='["apartment"]'>
                             <a class="aspect" href="img/placeholder.jpg" data-caption="Image caption" data-role="gallery-link">
                                 <div class="aspect__inner">
-                                    <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                    <picture style="width:400px; height:500px; display:block;">
+                                        <source data-srcset="img/download17.jfif" srcset="img/download17.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/download17.jfif"
+                                            src="img/download17.jfif"
                                             alt="media"
                                         />
                                     </picture>
@@ -100,11 +100,11 @@
                             >
                                 <div class="aspect__inner">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                        <source data-srcset="img/image25.jfif" srcset="img/image25.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/image25.jfif"
+                                            src="img/image25.jfif"
                                             alt="media"
                                         />
                                     </picture>
@@ -135,14 +135,14 @@
                         </figure>
 
                         <figure class="gallery_masonry-item col-sm-6 col-lg-4" data-groups='["living"]'>
-                            <a class="aspect" href="img/placeholder.jpg" data-caption="Image caption" data-role="gallery-link">
+                            <a class="aspect" href="img/download15.jfif" data-caption="Image caption" data-role="gallery-link">
                                 <div class="aspect__inner">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                        <source data-srcset="img/image27.jfif" srcset="img/image27.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/image27.jfif"
+                                            src="img/image27.jfif"
                                             alt="media"
                                         />
                                     </picture>
@@ -176,7 +176,7 @@
                             <a class="aspect" href="img/placeholder.jpg" data-caption="Image caption" data-role="gallery-link">
                                 <div class="aspect__inner">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                        <source data-srcset="img/download14.jfif" srcset="img/placeholder.jpg" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
                                             data-src="img/placeholder.jpg"
@@ -218,12 +218,12 @@
                                 data-role="gallery-link"
                             >
                                 <div class="aspect__inner">
-                                    <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                  <picture style="width:400px; height:400px; display:block;">
+                                        <source data-srcset="img/download24.jfif" srcset="img/download24.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/download24.jfif"
+                                            src="img/download24.jfif"
                                             alt="media"
                                         />
                                     </picture>
@@ -261,12 +261,12 @@
                                 data-role="gallery-link"
                             >
                                 <div class="aspect__inner">
-                                    <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                 <picture style="width:400px; height:400px; display:block;">
+                                        <source data-srcset="img/download14.jfif" srcset="img/download14.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/download14.jfif"
+                                            src="img/download14.jfif"
                                             alt="media"
                                         />
                                     </picture>
@@ -300,11 +300,11 @@
                             <a class="aspect" href="img/placeholder.jpg" data-caption="Image caption" data-role="gallery-link">
                                 <div class="aspect__inner">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                        <source data-srcset="img/download23.jfif" srcset="img/download23.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/download23.jfif"
+                                            src="img/download23.jfif"
                                             alt="media"
                                         />
                                     </picture>
@@ -343,11 +343,11 @@
                             >
                                 <div class="aspect__inner">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                        <source data-srcset="img/download18.jfif" srcset="img/download18.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/download18.jfif"
+                                            src="img/download18.jfif"
                                             alt="media"
                                         />
                                     </picture>
@@ -381,11 +381,11 @@
                             <a class="aspect" href="img/placeholder.jpg" data-caption="Image caption" data-role="gallery-link">
                                 <div class="aspect__inner">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                        <source data-srcset="img/download19.jfif" srcset="img/download19.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/download19.jfif"
+                                            src="img/download19.jfif"
                                             alt="media"
                                         />
                                     </picture>
@@ -419,11 +419,11 @@
                             <a class="aspect" href="img/placeholder.jpg" data-caption="Image caption" data-role="gallery-link">
                                 <div class="aspect__inner">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                        <source data-srcset="img/download20.jfif" srcset="img/download20.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/download20.jfif"
+                                            src="img/download20.jfif"
                                             alt="media"
                                         />
                                     </picture>
@@ -462,11 +462,11 @@
                             >
                                 <div class="aspect__inner">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                        <source data-srcset="img/download21.jfif" srcset="img/download21.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/download21.jfif"
+                                            src="img/download21.jfif"
                                             alt="media"
                                         />
                                     </picture>
@@ -505,11 +505,11 @@
                             >
                                 <div class="aspect__inner">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                        <source data-srcset="img/download22.jfif" srcset="img/download22.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/download22.jfif"
+                                            src="img/download22.jfif"
                                             alt="media"
                                         />
                                     </picture>
@@ -539,19 +539,7 @@
                             </a>
                         </figure>
                     </div>
-                    <ul class="pagination d-flex align-items-center">
-                        <li class="pagination-page">
-                            <a class="pagination-page_link d-flex align-items-center justify-content-center" href="#" data-current="true"
-                                >1</a
-                            >
-                        </li>
-                        <li class="pagination-page">
-                            <a class="pagination-page_link d-flex align-items-center justify-content-center" href="#">2</a>
-                        </li>
-                        <li class="pagination-page">
-                            <a class="pagination-page_link d-flex align-items-center justify-content-center" href="#">3</a>
-                        </li>
-                    </ul>
+                
                 </div>
             </div>
             <!-- gallery content end -->

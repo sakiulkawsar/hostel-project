@@ -19,7 +19,7 @@
             <div class="container">
                 <ul class="breadcrumbs d-flex flex-wrap align-content-center">
                     <li class="list-item">
-                        <a class="link" href="index.html">Home</a>
+                        <a class="link" href="index.php">Home</a>
                     </li>
 
                     <li class="list-item">
@@ -37,8 +37,8 @@
                         <div class="item-wrapper d-md-flex">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                    <source data-srcset="img/download13.jfif" srcset="img/download13.jfif" />
+                                    <img class="lazy" data-src="img/download13.jfif" src="img/download13.jfif" alt="media" />
                                 </picture>
                             </div>
                             <div class="main d-md-flex justify-content-between">
@@ -76,8 +76,8 @@
                         <div class="item-wrapper d-md-flex">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                    <source data-srcset="img/download14.jfif" srcset="img/download14.jfif" />
+                                    <img class="lazy" data-src="img/download14.jfif" src="img/download14.jfif" alt="media" />
                                 </picture>
                             </div>
                             <div class="main d-md-flex justify-content-between">
@@ -115,8 +115,8 @@
                         <div class="item-wrapper d-md-flex">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                    <source data-srcset="img/download15.jfif" srcset="img/download15.jfif" />
+                                    <img class="lazy" data-src="img/download15.jfif" src="img/download15.jfif" alt="media" />
                                 </picture>
                             </div>
                             <div class="main d-md-flex justify-content-between">
@@ -158,8 +158,8 @@
                         <div class="item-wrapper d-md-flex">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                    <source data-srcset="img/download16.jfif" srcset="img/download16.jfif" />
+                                    <img class="lazy" data-src="img/download16.jfif" src="img/download16.jfif" alt="media" />
                                 </picture>
                             </div>
                             <div class="main d-md-flex justify-content-between">
@@ -197,8 +197,8 @@
                         <div class="item-wrapper d-md-flex">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                    <source data-srcset="img/download17.jfif" srcset="img/img/download17.jfif" />
+                                    <img class="lazy" data-src="img/img/download17.jfif" src="img/img/download17.jfif" alt="media" />
                                 </picture>
                             </div>
                             <div class="main d-md-flex justify-content-between">
@@ -237,17 +237,7 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="pagination d-flex align-items-center">
-                    <li class="pagination-page">
-                        <a class="pagination-page_link d-flex align-items-center justify-content-center" href="#" data-current="true">1</a>
-                    </li>
-                    <li class="pagination-page">
-                        <a class="pagination-page_link d-flex align-items-center justify-content-center" href="#">2</a>
-                    </li>
-                    <li class="pagination-page">
-                        <a class="pagination-page_link d-flex align-items-center justify-content-center" href="#">3</a>
-                    </li>
-                </ul>
+             
             </div>
         </main>
         <!-- rooms page content end -->

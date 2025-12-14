@@ -1026,10 +1026,10 @@
                         <div class="item-wrapper d-md-flex flex-column">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                    <source data-srcset="img/images2.jfif" srcset="img/images2.jfif" />
+                                    <img class="lazy" data-src="img/images2.jfif" src="img/images2.jfif" alt="media" />
                                 </picture>
-                                <span class="media_label media_label--left"> Travel </span>
+                                <span class="media_label media_label--left">Rooms </span>
                             </div>
                             <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
                                 <a class="main_title h4" href="#" data-shave="true">How to cure wanderlust without leaving your home</a>
@@ -1054,8 +1054,8 @@
                         <div class="item-wrapper d-md-flex flex-column">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                    <source data-srcset="img/download4.jfif" srcset="img/download4.jfif" />
+                                    <img class="lazy" data-src="img/download4.jfif" src="img/download4.jfif" alt="media" />
                                 </picture>
                                 <span class="media_label media_label--left"> Tourist Guide </span>
                             </div>
@@ -1082,8 +1082,8 @@
                         <div class="item-wrapper d-md-flex flex-column">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                    <source data-srcset="img/images3.jfif" srcset="img/images3.jfif" />
+                                    <img class="lazy" data-src="img/images3.jfif" src="img/images3.jfif" alt="media" />
                                 </picture>
                                 <span class="media_label media_label--left"> Communication </span>
                             </div>
@@ -1170,7 +1170,13 @@
                     </ul>
                 </div>
                 <div class="contacts_map">
-                    <div id="map"></div>
+                     <div class="swiper-slide">
+                   <picture style="width:400px; height:400px; margin:100px; display:block; background:#f2f2f2;">
+    <img src="img/download6.jfif"
+         style="width:100%; height:100%; object-fit:contain;"
+         alt="media">
+</picture>
+                </div>
                 </div>
             </div>
         </section>
