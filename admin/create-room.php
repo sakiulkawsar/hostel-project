@@ -1,15 +1,15 @@
 <?php session_start();
 error_reporting(0);
 include('includes/config.php');
-// include('includes/checklogin.php');
-// check_login();
+include('includes/checklogin.php');
+check_login();
 //code for add courses
 if(isset($_POST['submit']))
 {
-$seater=$_POST['seater'];
-$roomno=$_POST['rmno'];
-$fees=$_POST['fee'];
-// extract($_POST);
+// $seater=$_POST['seater'];
+// $roomno=$_POST['rmno'];
+// $fees=$_POST['fee'];
+extract($_POST);
 $sql="SELECT room_no FROM rooms where room_no=?";
 $stmt1 = $mysqli->prepare($sql);
 $stmt1->bind_param('i',$roomno);

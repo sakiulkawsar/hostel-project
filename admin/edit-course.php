@@ -6,14 +6,15 @@ check_login();
 //code for add courses
 if(isset($_POST['submit']))
 {
-$seater=$_POST['seater'];
-$fees=$_POST['fees'];
+$coursecode=$_POST['cc'];
+$coursesn=$_POST['cns'];
+$coursefn=$_POST['cnf'];
 $id=$_GET['id'];
-$query="update rooms set seater=?,fees=? where id=?";
+$query="update courses set course_code=?,course_sn=?,course_fn=? where id=?";
 $stmt = $mysqli->prepare($query);
-$rc=$stmt->bind_param('iii',$seater,$fees,$id);
+$rc=$stmt->bind_param('sssi',$coursecode,$coursesn,$coursefn,$id);
 $stmt->execute();
-echo"<script>alert('Room Details has been Updated successfully');</script>";
+echo"<script>alert('Course has been Updated successfully');</script>";
 }
 
 ?>
@@ -26,7 +27,7 @@ echo"<script>alert('Room Details has been Updated successfully');</script>";
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
-	<title>Edit Room Details</title>
+	<title>Edit Course</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">>
@@ -48,17 +49,17 @@ echo"<script>alert('Room Details has been Updated successfully');</script>";
 				<div class="row">
 					<div class="col-md-12">
 					
-						<h2 class="page-title">Edit Room Details </h2>
+						<h2 class="page-title">Edit Course </h2>
 	
 						<div class="row">
 							<div class="col-md-12">
 								<div class="panel panel-default">
-									<div class="panel-heading">Edit Room Details</div>
+									<div class="panel-heading">Edit courses</div>
 									<div class="panel-body">
 										<form method="post" class="form-horizontal">
 												<?php	
 												$id=$_GET['id'];
-	$ret="select * from rooms where id=?";
+	$ret="select * from courses where id=?";
 		$stmt= $mysqli->prepare($ret) ;
 	 $stmt->bind_param('i',$id);
 	 $stmt->execute() ;//ok
@@ -69,22 +70,20 @@ echo"<script>alert('Room Details has been Updated successfully');</script>";
 	  	?>
 						<div class="hr-dashed"></div>
 						<div class="form-group">
-						<label class="col-sm-2 control-label">Seater  </label>
+						<label class="col-sm-2 control-label">Course Code </label>
 					<div class="col-sm-8">
-					<input type="text"  name="seater" value="<?php echo $row->seater;?>"  class="form-control"> </div>
+					<input type="text"  name="cc" value="<?php echo $row->course_code;?>"  class="form-control"> </div>
 					</div>
 				 <div class="form-group">
-				<label class="col-sm-2 control-label">Room no </label>
+				<label class="col-sm-2 control-label">Course Name (Short)</label>
 		<div class="col-sm-8">
-	<input type="text" class="form-control" name="rmno" id="rmno" value="<?php echo $row->room_no;?>" disabled>
-	<span class="help-block m-b-none">
-													Room no can't be changed.</span>
+	<input type="text" class="form-control" name="cns" id="cns" value="<?php echo $row->course_sn;?>" required="required">
 						 </div>
 						</div>
 <div class="form-group">
-									<label class="col-sm-2 control-label">Fees (PM) </label>
+									<label class="col-sm-2 control-label">Course Name(Full)</label>
 									<div class="col-sm-8">
-									<input type="text" class="form-control" name="fees" value="<?php echo $row->fees;?>" >
+									<input type="text" class="form-control" name="cnf" value="<?php echo $row->course_fn;?>" >
 												</div>
 											</div>
 
@@ -92,7 +91,7 @@ echo"<script>alert('Room Details has been Updated successfully');</script>";
 <?php } ?>
 												<div class="col-sm-8 col-sm-offset-2">
 													
-													<input class="btn btn-primary" type="submit" name="submit" value="Update Room Details ">
+													<input class="btn btn-primary" type="submit" name="submit" value="Update Course">
 												</div>
 											</div>
 
@@ -100,11 +99,20 @@ echo"<script>alert('Room Details has been Updated successfully');</script>";
 
 									</div>
 								</div>
+									
+							
 							</div>
+						
+									
+							
+
 							</div>
 						</div>
+
 					</div>
-				</div> 
+				</div> 	
+				
+
 			</div>
 		</div>
 	</div>

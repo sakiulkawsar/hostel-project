@@ -5,11 +5,13 @@
 			
 				<!-- <li class="ts-label">Main</li> -->
 				<li><a href="dashboard.php"><i class="fa fa-dashboard" style="color: #fff;"></i> Dashboard</a></li>
+
 					<li><a href="#"><i class="fa fa-files-o" style="color: #fff;"></i> Courses</a>
 					<ul>
 						<li><a href="add-courses.php">Add Courses</a></li>
 						<li><a href="manage-courses.php">Manage Courses</a></li>
 					</ul>
+				</li>
 				
 					<li><a href="#"><i class="fa fa-desktop" style="color: #fff;"></i> Rooms</a>
 					<ul>
@@ -18,8 +20,8 @@
 					</ul>
 				</li>
 
-				<li><a href="registration.php"><i class="fa fa-user" style="color: #fff;"></i>Student Registration</a></li>
-				<li><a href="manage-students.php"><i class="fa fa-users" style="color: #fff;"></i>Manage Students</a></li>
+				<li><a href=""><i class="fa fa-user" style="color: #fff;"></i>Student Registration</a></li>
+				<li><a href=""><i class="fa fa-users" style="color: #fff;"></i>Manage Students</a></li>
 						<li><a href="#"><i class="fa fa-files-o" style="color: #fff;"></i> Complaints</a>
 					<ul>
 						<li><a href="new-complaints.php">New</a></li>

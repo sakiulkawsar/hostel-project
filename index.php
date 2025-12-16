@@ -972,8 +972,8 @@
                         </ul>
                     </div>
                     <div class="promo_media" data-aos="fade-up">
-                        <picture>
-                            <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                        <picture style="height: auto; width: auto;">
+                            <source data-srcset="img/download21.jfif" srcset="img/placeholder.jpg" />
                             <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
                         </picture>
                         <div class="media_card media_card--top" data-aos="fade-left">
@@ -981,11 +981,11 @@
                             <div class="media_card-footer d-flex align-items-center">
                                 <span class="avatar">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                        <source data-srcset="img/download23.jfif" srcset="img/download23.jfif" />
                                         <img
                                             class="lazy"
-                                            data-src="img/placeholder.jpg"
-                                            src="img/placeholder.jpg"
+                                            data-src="img/download23.jfif"
+                                            src="img/download23.jfif"
                                             alt="media" />
                                     </picture>
                                 </span>

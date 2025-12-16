@@ -219,11 +219,11 @@
                             >
                                 <div class="aspect__inner">
                                   <picture style="width:400px; height:400px; display:block;">
-                                        <source data-srcset="img/download24.jfif" srcset="img/download24.jfif" />
+                                        <source data-srcset="img/download23.jfif" srcset="img/download23.jfif" />
                                         <img
                                             class="gallery_masonry-item_img lazy"
-                                            data-src="img/download24.jfif"
-                                            src="img/download24.jfif"
+                                            data-src="img/download23.jfif"
+                                            src="img/download23.jfif"
                                             alt="media"
                                         />
                                     </picture>

@@ -76,7 +76,9 @@
                         </div>
                     </div>
                     <div class="contacts_map">
-                        <div id="map"></div>
+                       
+                       <img style="height: 700px;" src="img/hr.avif" class="img-responsive" alt="Image">
+                       
                     </div>
                 </div>
             </section>

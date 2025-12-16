@@ -1,20 +1,8 @@
 <?php
 session_start();
 include('includes/config.php');
-// include('includes/checklogin.php');
-// check_login();
-
-if(isset($_GET['del']))
-{
-	$id=intval($_GET['del']);
-	$adn="delete from registration where regNo=?";
-		$stmt= $mysqli->prepare($adn);
-		$stmt->bind_param('i',$id);
-        $stmt->execute();
-        $stmt->close();	   
-
-
-}
+include('includes/checklogin.php');
+check_login();
 ?>
 <!doctype html>
 <html lang="en" class="no-js">
@@ -26,7 +14,7 @@ if(isset($_GET['del']))
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
-	<title>Manage Rooms</title>
+	<title>Access Log</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
@@ -35,18 +23,6 @@ if(isset($_GET['del']))
 	<link rel="stylesheet" href="css/fileinput.min.css">
 	<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
 	<link rel="stylesheet" href="css/style.css">
-<script language="javascript" type="text/javascript">
-var popUpWin=0;
-function popUpWindow(URLStr, left, top, width, height)
-{
- if(popUpWin)
-{
-if(!popUpWin.closed) popUpWin.close();
-}
-popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width='+510+',height='+430+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
-}
-</script>
-
 </head>
 
 <body>
@@ -58,57 +34,52 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						<h2 class="page-title" style="margin-top:4%">Manage Registred Students</h2>
+						<h2 class="page-title" style="margin-top:4%">Access Log</h2>
 						<div class="panel panel-default">
-							<div class="panel-heading">All Room Details</div>
+							<div class="panel-heading">All Courses Details</div>
 							<div class="panel-body">
 								<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
 									<thead>
 										<tr>
 											<th>Sno.</th>
-											<th>Student Name</th>
-											<th>Reg no</th>
-											<th>Contact no </th>
-											<th>room no  </th>
-											<th>Seater </th>
-											<th>Staying From </th>
-											<th>Action</th>
+											<th>User Id</th>
+											<th>User Email / Reg No.</th>
+											<th>IP</th>
+											<th>City</th>
+											<th>Country</th>
+											<th>Login Time</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
 											<th>Sno.</th>
-											<th>Student Name</th>
-											<th>Reg no</th>
-											<th>Contact no </th>
-											<th>Room no  </th>
-											<th>Seater </th>
-											<th>Staying From </th>
-											<th>Action</th>
+											<th>User Id</th>
+											<th>User Email /Reg No.</th>
+											<th>IP</th>
+											<th>City</th>
+											<th>Country</th>
+											<th>Login Time</th>
 										</tr>
 									</tfoot>
 									<tbody>
 <?php	
 $aid=$_SESSION['id'];
-$ret="select * from registration";
+$ret="select * from userlog";
 $stmt= $mysqli->prepare($ret) ;
 //$stmt->bind_param('i',$aid);
-$stmt->execute() ;//ok
+$stmt->execute() ;
 $res=$stmt->get_result();
 $cnt=1;
 while($row=$res->fetch_object())
 	  {
 	  	?>
 <tr><td><?php echo $cnt;;?></td>
-<td><?php echo $row->firstName;?><?php echo $row->middleName;?><?php echo $row->lastName;?></td>
-<td><?php echo $row->regno;?></td>
-<td><?php echo $row->contactno;?></td>
-<td><?php echo $row->roomno;?></td>
-<td><?php echo $row->seater;?></td>
-<td><?php echo $row->stayfrom;?></td>
-<td>
-<a href="student-details.php?regno=<?php echo $row->regno;?>" title="View Full Details"><i class="fa fa-desktop"></i></a>&nbsp;&nbsp;
-<a href="manage-students.php?del=<?php echo $row->regno;?>" title="Delete Record" onclick="return confirm('Do you want to delete');"><i class="fa fa-close"></i></a></td>
+<td><?php echo $row->userId;?></td>
+<td><?php echo $row->userEmail;?></td>
+<td><?php echo $row->userIp;?></td>
+<td><?php echo $row->city;?></td>
+<td><?php echo $row->country;?></td>
+<td><?php echo $row->loginTime;?></td>
 										</tr>
 									<?php
 $cnt=$cnt+1;
