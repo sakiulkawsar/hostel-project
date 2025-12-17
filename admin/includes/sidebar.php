@@ -20,8 +20,8 @@
 					</ul>
 				</li>
 
-				<li><a href=""><i class="fa fa-user" style="color: #fff;"></i>Student Registration</a></li>
-				<li><a href=""><i class="fa fa-users" style="color: #fff;"></i>Manage Students</a></li>
+				<li><a href="registration.php"><i class="fa fa-user" style="color: #fff;"></i>Student Registration</a></li>
+				<li><a href="manage-students.php"><i class="fa fa-users" style="color: #fff;"></i>Manage Students</a></li>
 						<li><a href="#"><i class="fa fa-files-o" style="color: #fff;"></i> Complaints</a>
 					<ul>
 						<li><a href="new-complaints.php">New</a></li>
@@ -33,13 +33,14 @@
 
 				<li><a href="#"><i class="fa fa-desktop" style="color: #fff;"></i> Feedback</a>
 					<ul>
-						<li><a href="">All Feebacks</a></li>
+						<li><a href="feedbacks.php">All Feebacks</a></li>
 						<!-- <li><a href="feedback-report.php">Feedbacks Report</a></li> -->
 					</ul>
 				</li>
 
 
-				<li><a href=""><i class="fa fa-file" style="color: #fff;"></i>User Access logs</a></li>
+				<li><a href="access-log.php"><i class="fa fa-file" style="color: #fff;"></i>User Access logs</a></li>
+				<li><a href="logout.php"><i class="fa fa-sign-out" style="color: #fff;"></i>Logout</a></li>
 
 			
 		</nav>

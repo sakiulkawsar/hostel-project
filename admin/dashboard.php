@@ -26,149 +26,105 @@ check_login();
 	<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<style>
+<style>
+	/* ===== Dashboard Background ===== */
+.content-wrapper {
+    background: #f4f6f9;
+    min-height: 100vh;
+}
 
-		/* ================= Modern Dashboard Enhancements ================= */
-
-/* --- general page title --- */
+/* ===== Page Title ===== */
 .page-title {
-  font-weight: 700;
-  letter-spacing: .2px;
-  color: #122029;
-  margin-bottom: 18px !important;
-  display: inline-block;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
 }
 
-/* --- panel base (card) --- */
+/* ===== Panel Card ===== */
 .panel {
-  border: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 26px rgba(18, 32, 40, 0.08);
-  transition: transform .22s cubic-bezier(.2,.9,.3,1), box-shadow .22s;
-  background: #ffffff;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
-/* subtle lift on hover */
 .panel:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(12, 30, 36, 0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
 
-/* panel-body as gradient banner for stat cards */
-.panel .panel-body {
-  padding: 22px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  gap:8px;
+/* ===== Panel Body ===== */
+.panel-body {
+    padding: 35px 20px;
 }
 
-/* stat panel layout */
-.stat-panel {
-  width:100%;
-  text-align:center;
-  padding: 8px 6px;
-}
-
-/* big stat number with subtle animation */
+/* ===== Stat Number ===== */
 .stat-panel-number {
-  font-size: 40px;
-  font-weight: 700;
-  color: #081e23;
-  line-height: 1;
-  letter-spacing: -0.5px;
-  transition: transform .25s;
-  transform-origin: center;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-/* small pulse when hover parent */
-.panel:hover .stat-panel-number {
-  transform: translateY(-4px);
-}
-
-/* stat title */
+/* ===== Stat Title ===== */
 .stat-panel-title {
-  font-size: 12px;
-  color: #5e6b6f;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: .12em;
-  margin-top:4px;
+    font-size: 14px;
+    margin-top: 8px;
+    letter-spacing: 1px;
+    opacity: 0.9;
 }
 
-/* footer anchor */
+/* ===== Footer Link ===== */
+.panel-footer {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 12px;
+    transition: background 0.3s ease;
+}
+
+.panel-footer:hover {
+    background: rgba(255,255,255,0.25);
+    text-decoration: none;
+}
+
+/* ===== Color Themes ===== */
+.bk-primary {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+}
+
+.bk-success {
+    background: linear-gradient(135deg, #1d976c, #93cbf9ff);
+}
+
+.bk-info {
+    background: linear-gradient(135deg, #2193b0, #756dedff);
+}
+
+.bk-warning {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+.bk-danger {
+    background: linear-gradient(135deg, #1d976c, #93f9b9);
+}
+
+/* ===== Anchor Fix ===== */
 .block-anchor {
-  display:block;
-  padding: 10px 16px;
-  text-align:center;
-  text-decoration:none;
-  color:#0b5560;
-  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.03));
-  border-top: 1px solid rgba(0,0,0,0.04);
-  font-weight:600;
-  transition: background .18s, color .18s, transform .18s;
-}
-.block-anchor:hover {
-  background: linear-gradient(90deg,#16a085,#1abc9c);
-  color:#fff;
-  transform: translateY(-2px);
+    display: block;
+    text-align: center;
 }
 
-/* --- color banners for existing bk-* classes (keeps your markup) --- */
-.bk-primary { background: linear-gradient(135deg,#0ea5a4,#07575b); color:#fff; }
-.bk-success { background: linear-gradient(135deg,#16a085,#0d8b73); color:#fff; }
-.bk-info    { background: linear-gradient(135deg,#3ab0ff,#0b84e6); color:#fff; }
-.bk-danger  { background: linear-gradient(135deg,#ff6b6b,#e05252); color:#fff; }
-.bk-warning { background: linear-gradient(135deg,#ffb86b,#ff9a3d); color:#09201f; }
-
-/* ensure panel-footer text contrast when banner is dark */
-.panel .panel-footer, .panel .block-anchor { color: inherit; }
-
-/* nice rounded corners for panels in grid */
-.col-md-4 { margin-bottom: 18px; }
-
-/* small responsive tweaks */
-@media (max-width: 992px) {
-  .stat-panel-number { font-size: 34px; }
-}
-@media (max-width: 640px) {
-  .col-md-4 { flex: 0 0 100%; max-width: 100%; }
-  .page-title { margin-top: 6px; display:block; }
+/* ===== Mobile Responsive Spacing ===== */
+@media (max-width: 768px) {
+    .stat-panel-number {
+        font-size: 36px;
+    }
 }
 
-/* subtle separators inside rows */
-.row > .col-md-12 > .row {
-  gap: 12px;
-}
-
-/* improve table-like lists (if any in page) */
-.block-anchor .fa {
-  margin-left: 8px;
-  opacity: .9;
-  transition: transform .2s;
-}
-.block-anchor:hover .fa { transform: translateX(6px); }
-
-/* small accessibility: focus outline */
-.block-anchor:focus, .panel:focus {
-  outline: 3px solid rgba(16,185,129,0.12);
-  outline-offset: 2px;
-}
-
-/* ---------- Optional micro animations for numbers ---------- */
-/* animate numbers on load (non-invasive) */
-@keyframes statPop {
-  0% { transform: scale(.92); opacity: 0; }
-  70% { transform: scale(1.02); opacity: .9; }
-  100% { transform: scale(1); opacity: 1; }
-}
-.stat-panel-number { animation: statPop .6s cubic-bezier(.2,.85,.3,1); }
-
-/* ================ end enhancements ================= */
-
-	</style>
+</style>
 
 
 </head>
