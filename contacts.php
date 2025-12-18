@@ -23,10 +23,10 @@
                     </li>
 
                     <li class="list-item">
-                        <a class="link" href="#">Contacts</a>
+                        <a class="link" href="#">Apointment</a>
                     </li>
                 </ul>
-                <h1 class="page_title">Contacts information</h1>
+                <h1 class="page_title">Appointment information</h1>
             </div>
         </header>
         <main>
@@ -35,7 +35,7 @@
                 <div class="container container--contacts d-xl-flex align-items-center">
                     <div class="contacts_info col-xl-7" data-aos="fade-up">
                         <div class="contacts_info-header">
-                            <h2 class="contacts_info-header_title">Contacts</h2>
+                            <h2 class="contacts_info-header_title">Appointment</h2>
                             <p class="contacts_info-header_text">
                                 Egestas pretium aenean pharetra magna ac. Et tortor consequat id porta nibh venenatis cras sed
                             </p>
@@ -390,21 +390,22 @@
                                     <label class="label" for="feedbackName">
                                         <i class="icon-user icon"></i>
                                     </label>
-                                    <input class="field required" id="feedbackName" type="text" placeholder="Name" />
+                                    <input class="field required" name="name" type="text" placeholder="Name" />
                                 </div>
                                 <div class="field-wrapper">
                                     <label class="label" for="feedbackEmail">
                                         <i class="icon-email icon"></i>
                                     </label>
-                                    <input class="field required" id="feedbackEmail" type="text" data-type="email" placeholder="Email" />
+                                    <input class="field required" name="email" type="text" data-type="email" placeholder="Email" />
                                 </div>
-                                <textarea class="field textarea required" id="feedbackMessage" placeholder="Message"></textarea>
-                                <button class="btn theme-element theme-element--accent" type="submit">Submit</button>
+                                <input class="field textarea required" name="feedback" placeholder="Message"></input>
+                                <button class="btn theme-element theme-element--accent" name=submit type="submit">Submit</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </section>
+            
             <!-- contact form section end -->
         </main>
         <?php include_once('include/footer.php') ?>

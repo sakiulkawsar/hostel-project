@@ -65,7 +65,7 @@ function navActive($fileName)
                         <a class="nav-item <?= navActive('gallery.php') ?>" href="gallery.php">Gallery</a>
                     </li>
                     <li class="header_nav-list_item">
-                        <a class="nav-item <?= navActive('contacts.php') ?>" href="contacts.php">Contact</a>
+                        <a class="nav-item <?= navActive('contacts.php') ?>" href="contacts.php">Appointment</a>
                     </li>
 
                   
