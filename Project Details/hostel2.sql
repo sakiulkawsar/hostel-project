@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2025 at 04:26 AM
+-- Generation Time: Dec 19, 2025 at 07:31 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,6 +32,7 @@ CREATE TABLE `admin` (
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(300) NOT NULL,
+  `role` varchar(30) NOT NULL,
   `reg_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `updation_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
@@ -40,8 +41,10 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `username`, `email`, `password`, `reg_date`, `updation_date`) VALUES
-(1, 'admin', 'admin@gmail.com', 'Test@1234', '2024-01-31 20:31:45', '2024-01-01');
+INSERT INTO `admin` (`id`, `username`, `email`, `password`, `role`, `reg_date`, `updation_date`) VALUES
+(1, 'admin', 'admin@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '1', '2024-01-31 20:31:45', '2024-01-01'),
+(2, 'student', 'student@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '2', '2025-12-13 04:23:48', '0000-00-00'),
+(3, 'parents', 'parents@gmail.com', '1234', '3', '2025-12-13 04:24:01', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -100,7 +103,9 @@ CREATE TABLE `complaints` (
 --
 
 INSERT INTO `complaints` (`id`, `ComplainNumber`, `userId`, `complaintType`, `complaintDetails`, `complaintDoc`, `complaintStatus`, `registrationDate`) VALUES
-(1, 389685413, 5, 'Electrical', 'Switch not working.', NULL, 'Closed', '2025-01-14 11:10:24');
+(1, 389685413, 5, 'Electrical', 'Switch not working.', NULL, 'Closed', '2025-01-14 11:10:24'),
+(2, 0, NULL, '0', '0', NULL, NULL, '2025-12-19 14:51:32'),
+(3, 1, 1, 'computer', 'not working', NULL, NULL, '2025-12-19 14:58:47');
 
 -- --------------------------------------------------------
 
@@ -127,7 +132,8 @@ INSERT INTO `courses` (`id`, `course_code`, `course_sn`, `course_fn`, `posting_d
 (4, 'BC36356', 'BCA', 'Bachelor Of Computer Application', '2025-01-01 19:31:42'),
 (5, 'MCA565', 'MCA', 'Master of Computer Application', '2025-01-01 19:31:42'),
 (6, 'MBA75', 'MBA', 'Master of Business Administration', '2025-01-01 19:31:42'),
-(7, 'BE765', 'BE', 'Bachelor of Engineering', '2025-01-01 19:31:42');
+(7, 'BE765', 'BE', 'Bachelor of Engineering', '2025-01-01 19:31:42'),
+(9, '123', 'BSC', 'Computer science and engineering', '2025-12-13 16:58:09');
 
 -- --------------------------------------------------------
 
@@ -155,6 +161,34 @@ CREATE TABLE `feedback` (
 
 INSERT INTO `feedback` (`id`, `AccessibilityWarden`, `AccessibilityMember`, `RedressalProblem`, `Room`, `Mess`, `HostelSurroundings`, `OverallRating`, `FeedbackMessage`, `userId`, `postinDate`) VALUES
 (1, 'Very Good', 'Very Good', 'Excellent', 'Very Good', 'Excellent', 'Average', 'Good', 'NA', 5, '2025-01-14 11:12:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mill`
+--
+
+CREATE TABLE `mill` (
+  `id` int(11) NOT NULL,
+  `studentId` varchar(20) NOT NULL,
+  `fullName` varchar(100) NOT NULL,
+  `mill` varchar(50) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `gender` enum('Male','Female','Other') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `mill`
+--
+
+INSERT INTO `mill` (`id`, `studentId`, `fullName`, `mill`, `phone`, `gender`) VALUES
+(1, 'Ut reprehenderit vel', 'rohim', 'Quis voluptatem susc', '+1 (474) 883-64', 'Male'),
+(3, 'Facilis cupiditate t', 'saddam', 'Dolor nihil sint lab', '+1 (788) 195-69', 'Male'),
+(6, 'Accusamus deserunt u', 'sojib', 'Enim nulla distincti', '+1 (207) 189-49', 'Male'),
+(7, 'Libero nulla irure q', 'Nolan Griffith', 'Atque eaque enim dol', '+1 (438) 933-23', ''),
+(8, 'Ipsa ipsa consequa', 'Willow Ross', 'Magni aperiam dolori', '+1 (477) 228-32', 'Male'),
+(9, 'Molestiae tempore n', 'Reagan Woodard', 'Saepe consectetur mi', '+1 (446) 561-36', ''),
+(10, 'Nostrum eveniet et ', 'Berk Bender', 'Accusamus assumenda ', '+1 (952) 534-63', '');
 
 -- --------------------------------------------------------
 
@@ -203,7 +237,9 @@ INSERT INTO `registration` (`id`, `roomno`, `seater`, `feespm`, `foodstatus`, `s
 (3, 200, 2, 6000, 1, '2025-01-10', 12, 'Bachelor  of Science', 108061233, 'John', '', 'Doe', 'male', 1425362514, 'hohn@gmail.com', 456312058, 'Alex Doe', 'father', 1234567890, '123 Xyz apartment ', 'New Delhi', 'Delhi (NCT)', 110001, '123 Xyz apartment ', 'New Delhi', 'Delhi (NCT)', 110001, '2025-01-03 14:58:26', NULL),
 (4, 200, 2, 6000, 0, '2025-01-08', 9, 'Bachelor Of commerce ', 10806121, 'Anuj', '', 'kumar', 'male', 1234567890, 'test@gmail.com', 546456546, 'ytrrtyrt', 'yrtyrty', 46456456, 'ttyrytryr', 'yrty', 'Andhra Pradesh', 123123, 'ttyrytryr', 'yrty', 'Andhra Pradesh', 123123, '2025-01-03 14:58:26', NULL),
 (5, 100, 5, 8000, 1, '2025-01-15', 3, 'Bachelor  of Technology', 14563213, 'John', '', 'Matthew ', 'male', 8956237845, 'john@gmail.com', 7845123698, 'Mrs. Jacob Mattew', 'Uncle', 5623894178, 'H-899, Gauri Apartment', 'Kanpur', 'Uttar Pradesh', 551007, 'H-899, Gauri Apartment', 'Kanpur', 'Uttar Pradesh', 551007, '2025-01-03 14:58:26', NULL),
-(6, 132, 5, 2000, 1, '2025-01-15', 12, 'Bachelor  of Technology', 14563213, 'Amit', 'kumar', 'Singh', 'male', 9632587412, 'amit123@gmail.com', 8563145621, 'Ram Kumar Singh', 'Father', 4563245631, 'Hno 181/1 Mayur Vihar ', 'New Delhi', 'Delhi (NCT)', 110092, 'Hno 181/1 Mayur Vihar ', 'New Delhi', 'Delhi (NCT)', 110092, '2025-01-03 14:58:26', NULL);
+(6, 132, 5, 2000, 1, '2025-01-15', 12, 'Bachelor  of Technology', 14563213, 'Amit', 'kumar', 'Singh', 'male', 9632587412, 'amit123@gmail.com', 8563145621, 'Ram Kumar Singh', 'Father', 4563245631, 'Hno 181/1 Mayur Vihar ', 'New Delhi', 'Delhi (NCT)', 110092, 'Hno 181/1 Mayur Vihar ', 'New Delhi', 'Delhi (NCT)', 110092, '2025-01-03 14:58:26', NULL),
+(7, 122, 0, 0, 0, '2021-12-24', 5, 'Master of Business Administration', 0, 'Hilda Mcdowell', 'Kirk Zamora', 'Tara Levy', 'male', 0, 'fazedagogo@mailinator.com', 0, 'Vera Chang', 'Lorem proident haru', 0, 'Est sunt harum veli', 'Est ipsam amet und', 'Mizoram', 0, 'Delectus sit dolori', 'Distinctio Rerum qu', 'Daman and Diu (UT)', 0, '2025-12-13 11:50:35', NULL),
+(8, 201, 2, 6000, 0, '1998-10-23', 3, 'Bachelor  of Science', 0, 'Cecilia Gates', 'Hannah Jennings', 'William Schneider', 'female', 0, 'kudalecux@mailinator.com', 0, 'Herrod Melton', 'Esse ea omnis ex cum', 0, 'Ea nisi vero sequi e', 'Anim velit aut ut q', 'Tripura', 0, 'Est porro qui blandi', 'Illo vel maiores lab', 'Assam', 0, '2025-12-17 17:12:06', NULL);
 
 -- --------------------------------------------------------
 
@@ -224,12 +260,12 @@ CREATE TABLE `rooms` (
 --
 
 INSERT INTO `rooms` (`id`, `seater`, `room_no`, `fees`, `posting_date`) VALUES
-(1, 5, 100, 8000, '2025-01-01 22:45:43'),
+(1, 0, 100, 0, '2025-01-01 22:45:43'),
 (2, 2, 201, 6000, '2025-01-01 22:45:43'),
 (3, 2, 200, 6000, '2025-01-01 22:45:43'),
 (4, 3, 112, 4000, '2025-01-01 22:45:43'),
-(5, 5, 132, 2000, '2025-01-01 22:45:43'),
-(6, 3, 145, 3000, '2025-01-01 22:45:43');
+(6, 3, 145, 3000, '2025-01-01 22:45:43'),
+(7, 1, 122, 7000, '2025-12-09 14:48:45');
 
 -- --------------------------------------------------------
 
@@ -336,7 +372,9 @@ INSERT INTO `userregistration` (`id`, `regNo`, `firstName`, `middleName`, `lastN
 (3, '10806121', 'Anuj', '', 'kumar', 'male', 1234567890, 'test@gmail.com', 'Test@123', '2025-01-02 14:56:18', NULL, NULL),
 (4, '108061233', 'John', '', 'Doe', 'male', 1425362514, 'hohn@gmail.com', 'Test@123', '2025-01-02 14:56:18', NULL, NULL),
 (5, 'BE123', 'John', '', 'Matthew ', 'male', 8956237845, 'john@gmail.com', '123', '2025-01-02 14:56:18', NULL, NULL),
-(6, '14563213', 'Amit', 'kumar', 'Singh', 'male', 9632587412, 'amit123@gmail.com', 'Test@123', '2025-01-02 14:56:18', '17-04-2024 05:12:02', NULL);
+(6, '14563213', 'Amit', 'kumar', 'Singh', 'male', 9632587412, 'amit123@gmail.com', 'Test@123', '2025-01-02 14:56:18', '17-04-2024 05:12:02', NULL),
+(7, 'Non ut qui dolore cu', 'Hilda Mcdowell', 'Kirk Zamora', 'Tara Levy', 'male', 0, 'fazedagogo@mailinator.com', 'Explicabo Quibusdam', '2025-12-13 11:50:35', NULL, NULL),
+(8, 'Non id amet dolore', 'Cecilia Gates', 'Hannah Jennings', 'William Schneider', 'female', 0, 'kudalecux@mailinator.com', 'Dolore qui non sequi', '2025-12-17 17:12:06', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -371,6 +409,13 @@ ALTER TABLE `courses`
 --
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mill`
+--
+ALTER TABLE `mill`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `studentId` (`studentId`);
 
 --
 -- Indexes for table `registration`
@@ -412,7 +457,7 @@ ALTER TABLE `userregistration`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `complainthistory`
@@ -424,13 +469,13 @@ ALTER TABLE `complainthistory`
 -- AUTO_INCREMENT for table `complaints`
 --
 ALTER TABLE `complaints`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `feedback`
@@ -439,16 +484,22 @@ ALTER TABLE `feedback`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `mill`
+--
+ALTER TABLE `mill`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `states`
@@ -466,7 +517,7 @@ ALTER TABLE `userlog`
 -- AUTO_INCREMENT for table `userregistration`
 --
 ALTER TABLE `userregistration`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
