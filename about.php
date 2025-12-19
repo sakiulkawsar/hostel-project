@@ -315,7 +315,7 @@
                     </div>
                     <div class="about_stages-media col-xl-6" data-aos="fade-in">
                        <picture style="width:500px; height:500px; margin:50px; display:block; background:#f2f2f2;">
-                            <source data-srcset="img/images11.jfif" srcset="img/" />
+                            <source data-srcset="img/room4.webp" srcset="img/" />
                             <img class="lazy" data-src="img/" src="img/" alt="media" />
                         </picture>
                     </div>

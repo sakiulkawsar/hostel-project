@@ -31,16 +31,16 @@
                         <h4 class="footer_main-block_header">Quick links</h4>
                         <ul class="footer_main-block_nav d-flex flex-lg-column">
                             <li class="list-item">
-                                <a class="link underlined underlined--white nav-item" data-page="home" href="index.html">Home</a>
+                                <a class="link underlined underlined--white nav-item" data-page="home" href="index.php">Home</a>
                             </li>
                             <li class="list-item">
-                                <a class="link underlined underlined--white nav-item" data-page="about" href="about.html">About</a>
+                                <a class="link underlined underlined--white nav-item" data-page="about" href="about.php">About</a>
                             </li>
                             <li class="list-item">
-                                <a class="link underlined underlined--white nav-item" data-page="rooms" href="rooms.html">Rooms</a>
+                                <a class="link underlined underlined--white nav-item" data-page="rooms" href="rooms.php">Rooms</a>
                             </li>
                             <li class="list-item">
-                                <a class="link underlined underlined--white nav-item" data-page="news" href="news.html">News</a>
+                                <a class="link underlined underlined--white nav-item" data-page="news" href="contact.php">Contact</a>
                             </li>
                         </ul>
                     </div>

@@ -59,13 +59,10 @@
                                 <div class="main_pricing d-flex flex-column align-items-md-end justify-content-md-between">
                                     <div class="wrapper d-flex flex-column">
                                         <span class="main_pricing-item">
-                                            <span class="h2">$29</span>
-                                            / 1 night
+                                            <span class="h2">7000 Tk</span>
+                                            / 1 month
                                         </span>
-                                        <span class="main_pricing-item">
-                                            <span class="h4">$100</span>
-                                            / 7 nights
-                                        </span>
+                                       
                                     </div>
                                     <a class="theme-element theme-element--accent btn" href="#">Book now</a>
                                 </div>
@@ -98,13 +95,10 @@
                                 <div class="main_pricing d-flex flex-column align-items-md-end justify-content-md-between">
                                     <div class="wrapper d-flex flex-column">
                                         <span class="main_pricing-item">
-                                            <span class="h2">$19</span>
-                                            / 1 night
+                                            <span class="h2">4500 Tk</span>
+                                            / 1 month 
                                         </span>
-                                        <span class="main_pricing-item">
-                                            <span class="h4">$80</span>
-                                            / 7 nights
-                                        </span>
+                                       
                                     </div>
                                     <a class="theme-element theme-element--accent btn" href="#">Book now</a>
                                 </div>
@@ -140,13 +134,10 @@
                                 </div>
                                 <div class="main_pricing d-flex flex-column align-items-md-end justify-content-md-between">
                                     <div class="wrapper d-flex flex-column">
+                                       
                                         <span class="main_pricing-item">
-                                            <span class="h2">$99</span>
-                                            / 1 night
-                                        </span>
-                                        <span class="main_pricing-item">
-                                            <span class="h4">$220</span>
-                                            / 7 nights
+                                            <span class="h4">7000 Tk</span></span>
+                                            / 1 month
                                         </span>
                                     </div>
                                     <a class="theme-element theme-element--accent btn" href="#">Book now</a>
@@ -180,13 +171,10 @@
                                 <div class="main_pricing d-flex flex-column align-items-md-end justify-content-md-between">
                                     <div class="wrapper d-flex flex-column">
                                         <span class="main_pricing-item">
-                                            <span class="h2">$29</span>
-                                            / 1 night
+                                            <span class="h2">5000 Tk</span>
+                                            / 1 month
                                         </span>
-                                        <span class="main_pricing-item">
-                                            <span class="h4">$115</span>
-                                            / 7 nights
-                                        </span>
+                                       
                                     </div>
                                     <a class="theme-element theme-element--accent btn" href="#">Book now</a>
                                 </div>
@@ -223,13 +211,10 @@
                                 <div class="main_pricing d-flex flex-column align-items-md-end justify-content-md-between">
                                     <div class="wrapper d-flex flex-column">
                                         <span class="main_pricing-item">
-                                            <span class="h2">$59</span>
-                                            / 1 night
+                                            <span class="h2">6500 Tk</span>
+                                            / 1 month
                                         </span>
-                                        <span class="main_pricing-item">
-                                            <span class="h4">$210</span>
-                                            / 7 nights
-                                        </span>
+                                       
                                     </div>
                                     <a class="theme-element theme-element--accent btn" href="#">Book now</a>
                                 </div>

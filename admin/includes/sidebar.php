@@ -24,6 +24,7 @@
 				<li><a href="manage-students.php"><i class="fa fa-users" style="color: #fff;"></i>Manage Students</a></li>
 						<li><a href="#"><i class="fa fa-files-o" style="color: #fff;"></i> Complaints</a>
 					<ul>
+						<li><a href="add-complaints.php">Add</a></li>
 						<li><a href="new-complaints.php">New</a></li>
 						<li><a href="inprocess-complaints.php">In Process</a></li>
 						<li><a href="closed-complaints.php">Closed</a></li>
@@ -35,6 +36,13 @@
 					<ul>
 						<li><a href="feedbacks.php">All Feebacks</a></li>
 						<!-- <li><a href="feedback-report.php">Feedbacks Report</a></li> -->
+					</ul>
+				</li>
+				<li><a href="#"><i class="fa fa-desktop" style="color: #fff;"></i> Mill</a>
+					<ul>
+						<li><a href="add-mill.php">Add mill</a></li>
+						<li><a href="manage-mill.php">Manage mill</a></li>
+						
 					</ul>
 				</li>
 

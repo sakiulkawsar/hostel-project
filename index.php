@@ -114,20 +114,19 @@
                     </form>
                 </div>
                 <div class="hero_media" data-aos="zoom-in">
-    <picture>
-        <source srcset="img/download.jfif">
-        <img 
-            src="img/placeholder.jpg"
-            style="
+                    <picture>
+                        <source srcset="img/hostel.webp">
+                        <img
+                            src="img/hostel.webp"
+                            style="
                 width:500px;
-                height:400px;
+                height:620px;
                 object-fit:cover;
                 padding:30px;
                 margin-top:60px;   /* pushes image down */
-            "
-        >
-    </picture>
-</div>
+            ">
+                    </picture>
+                </div>
 
             </div>
         </section>
@@ -147,16 +146,16 @@
                         <div class="item-wrapper d-md-flex flex-column">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/6bed.jfif" srcset="img/placeholder.jpg" />
-                                    <img class="lazy" data-src="img/6bed.jfif" src="img/placeholder.jpg" alt="media" />
+                                    <source data-srcset="img/room2.webp" srcset="img/room2.webp" />
+                                    <img class="lazy" data-src="img/room2.webp" src="img/img/room2.webp" alt="media" />
                                 </picture>
                                 <span class="media_label media_label--pricing">
-                                    <span class="price h4">$18</span>
-                                    / 1 night
+                                    <span class="price h4">5000 TK</span>
+                                    / 1 month
                                 </span>
                             </div>
                             <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
-                                <a class="main_title h4" href="room.html" data-shave="true">Bed in 6-Bed Room with Shared Bathroom</a>
+                                <a class="main_title h4" href="room.html" data-shave="true">3 Bed with Shared Bathroom</a>
                                 <div class="main_amenities">
                                     <span class="main_amenities-item d-inline-flex align-items-center">
                                         <i class="icon-user icon"></i>
@@ -177,17 +176,17 @@
                     <li class="rooms_list-item col-md-6 col-xl-4" data-order="2" data-aos="fade-up" data-aos-delay="50">
                         <div class="item-wrapper d-md-flex flex-column">
                             <div class="media">
-                               <picture>
-                                    <source data-srcset="img/2bed.jfif" srcset="img/placeholder.jpg" />
-                                    <img class="lazy" data-src="img/2bed.jfif" src="img/placeholder.jpg" alt="media" />
+                                <picture>
+                                    <source data-srcset="img/room4.webp" srcset="img/room4.webp" />
+                                    <img class="lazy" data-src="img/room4.webp" src="img/img/room4.webp" alt="media" />
                                 </picture>
                                 <span class="media_label media_label--pricing">
-                                    <span class="price h4">$35</span>
-                                    / 1 night
+                                    <span class="price h4">6000 TK</span>
+                                    / 1 month
                                 </span>
                             </div>
                             <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
-                                <a class="main_title h4" href="room.html" data-shave="true">Double Room with Private Bathroom</a>
+                                <a class="main_title h4" href="room.html" data-shave="true">Double room with Private Bathroom</a>
                                 <div class="main_amenities">
                                     <span class="main_amenities-item d-inline-flex align-items-center">
                                         <i class="icon-user icon"></i>
@@ -325,11 +324,11 @@
                     </div>
                 </div>
                 <div class="about_media" data-aos="zoom-in">
-                      <picture>
-                                    <source data-srcset="img/parking.jfif" width="200px" srcset="img/placeholder.jpg" />
-                                    <img class="lazy" data-src="img/parking.jfif" src="img/placeholder.jpg" alt="media" 
-                                    style="width:550px;height: 500px;px;object-fit:cover;margin-top:40px;"/>
-                                </picture>
+                    <picture>
+                        <source data-srcset="img/parking.webp" width="200px" srcset="img/parking.webp" />
+                        <img class="lazy" data-src="img/parking.webp" src="img/placeholder.jpg" alt="media"
+                            style="width:550px;height: 500px;object-fit:cover;margin-top:40px;" />
+                    </picture>
                 </div>
             </div>
         </section>
@@ -565,228 +564,117 @@
         </div>
         <!-- rating section end -->
         <!-- reviews section start -->
-        <section class="reviews section">
-            <div class="container d-lg-flex">
-                <div class="media">
-                    <div class="reviews_slider reviews_slider--media">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source data-srcset="img/guest.jfif" srcset="img/guest.jfif" />
-                                
-                                    
-                                    <img class="lazy" data-src="img/guest.jfif" src="img/guest.jfif" alt="media" />
-                                </picture>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source data-srcset="guest.jfif" srcset="img/guest.jfif" />
-                                    <img class="lazy" data-src="img/guest.jfif" src="img/guest.jfif" alt="media" />
-                                </picture>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source data-srcset="img/guest.jfif" srcset="img/guest.jfif" />
-                                    <img class="lazy" data-src="img/guest.jfif" src="img/guest.jfif" alt="media" />
-                                </picture>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source data-srcset="img/guest.jfif" srcset="img/guest.jfif" />
-                                    <img class="lazy" data-src="img/guest.jfif" src="img/guest.jfif" alt="media" />
-                                </picture>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture>
-                                    <source data-srcset="img/guest.jfif" srcset="img/guest.jfif" />
-                                    <img class="lazy" data-src="img/guest.jfif" src="img/guest.jfif" alt="media" />
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="main col-lg-6 d-lg-flex flex-column justify-content-between">
-                    <h2 class="reviews_header" data-aos="fade-down">What our guests say</h2>
-                    <div class="reviews_slider reviews_slider--main">
-                        <div class="swiper-wrapper">
-                            <div class="reviews_slider-slide d-flex flex-column justify-content-between swiper-slide">
-                                <div class="reviews_slider-slide_stars d-flex align-items-center">
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                </div>
-                                <span class="reviews_slider-slide_date">
-                                    <span class="h4">Date of stay:</span>
-                                    July 2021
-                                </span>
-                                <div class="reviews_slider-slide_main">
-                                    <h4 class="title">Very cozy room close to everything</h4>
-                                    <p class="text">
-                                        Consequat interdum varius sit amet mattis vulputate enim nulla. Posuere morbi leo urna molestie
-                                        at elementum eu facilisis sed. Diam phasellus vestibulum lorem sed risus ultricies tristique.
-                                    </p>
-                                </div>
-                                <span class="reviews_slider-slide_guest d-flex align-items-center">
-                                    <span class="avatar">
-                                        <picture>
-                                            <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                            <img
-                                                class="lazy"
-                                                data-src="img/placeholder.jpg"
-                                                src="img/placeholder.jpg"
-                                                alt="media" />
-                                        </picture>
-                                    </span>
-                                    <span class="name h6">Betty Randal</span>
-                                </span>
-                            </div>
-                            <div class="reviews_slider-slide d-flex flex-column justify-content-between swiper-slide">
-                                <div class="reviews_slider-slide_stars d-flex align-items-center">
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                </div>
-                                <span class="reviews_slider-slide_date">
-                                    <span class="h4">Date of stay:</span>
-                                    October 2021
-                                </span>
-                                <div class="reviews_slider-slide_main">
-                                    <h4 class="title">Consequat interdum varius sit varius</h4>
-                                    <p class="text">
-                                        Consequat interdum varius sit amet mattis vulputate enim nulla. Posuere morbi leo urna molestie
-                                        at elementum eu facilisis sed. Diam phasellus vestibulum lorem sed risus ultricies tristique.
-                                    </p>
-                                </div>
-                                <span class="reviews_slider-slide_guest d-flex align-items-center">
-                                    <span class="avatar">
-                                        <picture>
-                                            <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                            <img
-                                                class="lazy"
-                                                data-src="img/placeholder.jpg"
-                                                src="img/placeholder.jpg"
-                                                alt="media" />
-                                        </picture>
-                                    </span>
-                                    <span class="name h6">Max Jones</span>
-                                </span>
-                            </div>
-                            <div class="reviews_slider-slide d-flex flex-column justify-content-between swiper-slide">
-                                <div class="reviews_slider-slide_stars d-flex align-items-center">
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                </div>
-                                <span class="reviews_slider-slide_date">
-                                    <span class="h4">Date of stay:</span>
-                                    December 2021
-                                </span>
-                                <div class="reviews_slider-slide_main">
-                                    <h4 class="title">Diam sit molestie at elementum eu</h4>
-                                    <p class="text">
-                                        Consequat interdum varius sit amet mattis vulputate enim nulla. Posuere morbi leo urna molestie
-                                        at elementum eu facilisis sed. Diam phasellus vestibulum lorem sed risus ultricies tristique.
-                                    </p>
-                                </div>
-                                <span class="reviews_slider-slide_guest d-flex align-items-center">
-                                    <span class="avatar">
-                                        <picture>
-                                            <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                            <img
-                                                class="lazy"
-                                                data-src="img/placeholder.jpg"
-                                                src="img/placeholder.jpg"
-                                                alt="media" />
-                                        </picture>
-                                    </span>
-                                    <span class="name h6">Kate Walker</span>
-                                </span>
-                            </div>
-                            <div class="reviews_slider-slide d-flex flex-column justify-content-between swiper-slide">
-                                <div class="reviews_slider-slide_stars d-flex align-items-center">
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                </div>
-                                <span class="reviews_slider-slide_date">
-                                    <span class="h4">Date of stay:</span>
-                                    April 2021
-                                </span>
-                                <div class="reviews_slider-slide_main">
-                                    <h4 class="title">Elementum eu facilisis at elementum</h4>
-                                    <p class="text">
-                                        Consequat interdum varius sit amet mattis vulputate enim nulla. Posuere morbi leo urna molestie
-                                        at elementum eu facilisis sed. Diam phasellus vestibulum lorem sed risus ultricies tristique.
-                                    </p>
-                                </div>
-                                <span class="reviews_slider-slide_guest d-flex align-items-center">
-                                    <span class="avatar">
-                                        <picture>
-                                            <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                            <img
-                                                class="lazy"
-                                                data-src="img/placeholder.jpg"
-                                                src="img/placeholder.jpg"
-                                                alt="media" />
-                                        </picture>
-                                    </span>
-                                    <span class="name h6">Panam Palmer</span>
-                                </span>
-                            </div>
-                            <div class="reviews_slider-slide d-flex flex-column justify-content-between swiper-slide">
-                                <div class="reviews_slider-slide_stars d-flex align-items-center">
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                    <i class="icon-star icon"></i>
-                                </div>
-                                <span class="reviews_slider-slide_date">
-                                    <span class="h4">Date of stay:</span>
-                                    May 2021
-                                </span>
-                                <div class="reviews_slider-slide_main">
-                                    <h4 class="title">Ultricies eu ultricies tristique facilisis</h4>
-                                    <p class="text">
-                                        Consequat interdum varius sit amet mattis vulputate enim nulla. Posuere morbi leo urna molestie
-                                        at elementum eu facilisis sed. Diam phasellus vestibulum lorem sed risus ultricies tristique.
-                                    </p>
-                                </div>
-                                <span class="reviews_slider-slide_guest d-flex align-items-center">
-                                    <span class="avatar">
-                                        <picture>
-                                            <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                            <img
-                                                class="lazy"
-                                                data-src="img/placeholder.jpg"
-                                                src="img/placeholder.jpg"
-                                                alt="media" />
-                                        </picture>
-                                    </span>
-                                    <span class="name h6">Lisa Adams</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-controls d-flex align-items-center">
-                        <a class="swiper-button-prev d-inline-flex theme-element theme-element--light" href="#">
-                            <i class="icon-arrow_left icon"></i>
-                        </a>
-                        <a class="swiper-button-next d-inline-flex theme-element theme-element--light" href="#">
-                            <i class="icon-arrow_right icon"></i>
-                        </a>
+       <section class="reviews section"
+    style="padding:80px 0; background:#f9fafc;">
+
+    <div class="container d-lg-flex"
+        style="gap:40px; align-items:center;">
+
+        <!-- LEFT IMAGE -->
+        <div class="media"
+            style="width:420px; height:520px; border-radius:18px; overflow:hidden;
+                   box-shadow:0 20px 40px rgba(0,0,0,0.12);">
+
+            <div class="reviews_slider reviews_slider--media" style="height:100%;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="height:100%;">
+                        <img class="lazy"
+                             data-src="img/guest.webp"
+                             src="img/guest.webp"
+                             alt="media"
+                             style="width:100%; height:100%; object-fit:cover;" />
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="main col-lg-6 d-lg-flex flex-column justify-content-between"
+             >
+
+            <h2 class="reviews_header"
+                style="font-size:40px; font-weight:700; margin-bottom:30px; color:#222;"
+                data-aos="fade-down">
+                What our guests say
+            </h2>
+
+            <!-- SLIDER -->
+            <div class="reviews_slider reviews_slider--main">
+                <div class="swiper-wrapper">
+
+                    <div class="reviews_slider-slide d-flex flex-column justify-content-between swiper-slide"
+                         style="gap:20px;">
+
+                        <!-- STARS -->
+                        <div class="reviews_slider-slide_stars d-flex align-items-center"
+                             style="color:#f4b400; font-size:18px;">
+                            ★★★★★
+                        </div>
+
+                        <!-- DATE -->
+                        <span class="reviews_slider-slide_date"
+                              style="color:#777; font-size:14px;">
+                            <strong>Date of stay:</strong> July 2021
+                        </span>
+
+                        <!-- TEXT -->
+                        <div class="reviews_slider-slide_main">
+                            <h4 class="title"
+                                style="font-size:20px; font-weight:600; margin-bottom:10px;">
+                                Very cozy room close to everything
+                            </h4>
+                            <p class="text"
+                               style="font-size:15px; line-height:1.6; color:#555;">
+                                Consequat interdum varius sit amet mattis vulputate enim nulla.
+                            </p>
+                        </div>
+
+                        <!-- GUEST -->
+                        <span class="reviews_slider-slide_guest d-flex align-items-center"
+                              style="gap:12px; margin-top:15px;">
+
+                            <span class="avatar"
+                                  style="width:48px; height:48px; border-radius:50%;
+                                         overflow:hidden;">
+                                <img src="img/placeholder.jpg"
+                                     style="width:100%; height:100%; object-fit:cover;">
+                            </span>
+
+                            <span class="name h6"
+                                  style="font-size:15px; font-weight:600;">
+                                Betty Randal
+                            </span>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CONTROLS -->
+            <div class="swiper-controls d-flex align-items-center"
+                 style="gap:15px; margin-top:25px;">
+
+                <a class="swiper-button-prev"
+                   style="width:44px; height:44px; border-radius:50%;
+                          background:#111; color:#fff;
+                          display:flex; align-items:center; justify-content:center;
+                          text-decoration:none;">
+                    ‹
+                </a>
+
+                <a class="swiper-button-next"
+                   style="width:44px; height:44px; border-radius:50%;
+                          background:#111; color:#fff;
+                          display:flex; align-items:center; justify-content:center;
+                          text-decoration:none;">
+                    ›
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
         <!-- reviews section end -->
         <!-- promo section start -->
         <section class="promo section">
@@ -973,19 +861,19 @@
                     </div>
                     <div class="promo_media" data-aos="fade-up">
                         <picture style="height: auto; width: auto;">
-                            <source data-srcset="img/download21.jfif" srcset="img/placeholder.jpg" />
-                            <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                            <source data-srcset="img/room.webp" srcset="img/room.webp" />
+                            <img class="lazy" data-src="img/room.webp" src="img/room.webp" alt="media" />
                         </picture>
                         <div class="media_card media_card--top" data-aos="fade-left">
                             <h4 class="media_card-text">This is the perfect hostel for a weekend getaway!</h4>
                             <div class="media_card-footer d-flex align-items-center">
                                 <span class="avatar">
                                     <picture>
-                                        <source data-srcset="img/download23.jfif" srcset="img/download23.jfif" />
+                                        <source data-srcset="img/port.avif" srcset="img/port.avif" />
                                         <img
                                             class="lazy"
-                                            data-src="img/download23.jfif"
-                                            src="img/download23.jfif"
+                                            data-src="img/port.avif"
+                                            src="img/port.avif"
                                             alt="media" />
                                     </picture>
                                 </span>
@@ -1002,8 +890,8 @@
                             </div>
                         </div>
                         <div class="media_card media_card--bottom" data-aos="fade-right">
-                            <h4 class="media_card-text">Family Room with Private Bathroom</h4>
-                            <div class="media_card-pricing"><span class="h2">$149</span> / 1 night</div>
+                            <h4 class="media_card-text">Room with Private Bathroom</h4>
+                            <div class="media_card-pricing"><span class="h2">7000 TK</span> / 1 month</div>
                             <a class="media_card-btn btn theme-element theme-element--light" href="#">See availability</a>
                         </div>
                     </div>
@@ -1054,10 +942,10 @@
                         <div class="item-wrapper d-md-flex flex-column">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/download4.jfif" srcset="img/download4.jfif" />
-                                    <img class="lazy" data-src="img/download4.jfif" src="img/download4.jfif" alt="media" />
+                                    <source data-srcset="img/libary.webp" srcset="img/libary.webp" />
+                                    <img class="lazy" data-src="img/libary.webp" src="img/libary.webp" alt="media" />
                                 </picture>
-                                <span class="media_label media_label--left"> Tourist Guide </span>
+                                <span class="media_label media_label--left">Library  </span>
                             </div>
                             <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
                                 <a class="main_title h4" href="#" data-shave="true">Yoga Hostels to soothe your mind and nomadic soul</a>
@@ -1082,10 +970,10 @@
                         <div class="item-wrapper d-md-flex flex-column">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/images3.jfif" srcset="img/images3.jfif" />
-                                    <img class="lazy" data-src="img/images3.jfif" src="img/images3.jfif" alt="media" />
+                                    <source data-srcset="img/housing.webp" srcset="img/housing.webp" />
+                                    <img class="lazy" data-src="img/housing.webp" src="img/housing.webp" alt="media" />
                                 </picture>
-                                <span class="media_label media_label--left"> Communication </span>
+                                <span class="media_label media_label--left"> Housing </span>
                             </div>
                             <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
                                 <a class="main_title h4" href="#" data-shave="true">What happens when you travel with strangers?</a>
@@ -1170,13 +1058,13 @@
                     </ul>
                 </div>
                 <div class="contacts_map">
-                     <div class="swiper-slide">
-                   <picture style="width:400px; height:400px; margin:100px; display:block; background:#f2f2f2;">
-    <img src="img/download6.jfif"
-         style="width:100%; height:100%; object-fit:contain;"
-         alt="media">
-</picture>
-                </div>
+                    <div class="swiper-slide">
+                        <picture style="width:400px; height:400px; margin:100px; display:block; background:#f2f2f2;">
+                            <img src="img/download6.jfif"
+                                style="width:100%; height:100%; object-fit:contain;"
+                                alt="media">
+                        </picture>
+                    </div>
                 </div>
             </div>
         </section>
