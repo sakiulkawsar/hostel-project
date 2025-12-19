@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
                 <div class="row">
                     <div class="col-md-12">
 
-                        <h2 class="page-title">Add a Room </h2>
+                        <h2 class="page-title">Add Complain</h2>
 
                         <div class="row">
                             <div class="col-md-12">
@@ -82,26 +82,26 @@ if (isset($_POST['submit'])) {
 
                                             <div class="hr-dashed"></div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label">ComplainNumber </label>
+                                                <label class="col-sm-2 control-label">Room Number </label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" name="complainnum" id="complainnum" value="" required="required">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label">complaintType.</label>
+                                                <label class="col-sm-2 control-label">Complain Type.</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" name="complaintype" id="complaintype" value="" required="required">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label">complaintDetails</label>
+                                                <label class="col-sm-2 control-label">Complain Details</label>
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" name="complaindet" id="complaindet" value="" required="required">
                                                 </div>
                                             </div>
 
                                             <div class="col-sm-8 col-sm-offset-2">
-                                                <input class="btn btn-primary" type="submit" name="submit" value="Create Room ">
+                                                <input class="btn btn-primary" type="submit" name="submit" value="Create complain ">
                                             </div>
                                     </div>
 
