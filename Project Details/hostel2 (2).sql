@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2025 at 07:31 PM
+-- Generation Time: Dec 20, 2025 at 07:48 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -133,7 +133,8 @@ INSERT INTO `courses` (`id`, `course_code`, `course_sn`, `course_fn`, `posting_d
 (5, 'MCA565', 'MCA', 'Master of Computer Application', '2025-01-01 19:31:42'),
 (6, 'MBA75', 'MBA', 'Master of Business Administration', '2025-01-01 19:31:42'),
 (7, 'BE765', 'BE', 'Bachelor of Engineering', '2025-01-01 19:31:42'),
-(9, '123', 'BSC', 'Computer science and engineering', '2025-12-13 16:58:09');
+(9, '123', 'BSC', 'Computer science and engineering', '2025-12-13 16:58:09'),
+(10, 'Saepe at corrupti t', 'Aspernatur elit pro', 'Aut aut necessitatib', '2025-12-20 02:54:41');
 
 -- --------------------------------------------------------
 
@@ -165,6 +166,26 @@ INSERT INTO `feedback` (`id`, `AccessibilityWarden`, `AccessibilityMember`, `Red
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `font`
+--
+
+CREATE TABLE `font` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `message` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `font`
+--
+
+INSERT INTO `font` (`id`, `name`, `email`, `message`) VALUES
+(1, 'Velma Owens', 'ninexym@mailinator.com', 'Perspiciatis minima');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `mill`
 --
 
@@ -188,7 +209,12 @@ INSERT INTO `mill` (`id`, `studentId`, `fullName`, `mill`, `phone`, `gender`) VA
 (7, 'Libero nulla irure q', 'Nolan Griffith', 'Atque eaque enim dol', '+1 (438) 933-23', ''),
 (8, 'Ipsa ipsa consequa', 'Willow Ross', 'Magni aperiam dolori', '+1 (477) 228-32', 'Male'),
 (9, 'Molestiae tempore n', 'Reagan Woodard', 'Saepe consectetur mi', '+1 (446) 561-36', ''),
-(10, 'Nostrum eveniet et ', 'Berk Bender', 'Accusamus assumenda ', '+1 (952) 534-63', '');
+(10, 'Nostrum eveniet et ', 'Berk Bender', 'Accusamus assumenda ', '+1 (952) 534-63', 'Male'),
+(13, '101', 'kawsar', 'Ipsum ut dolor odio ', '+1 (503) 186-22', 'Male'),
+(14, 'Qui dicta aut deseru', 'Fletcher Glenn', 'Irure eligendi elit', '+1 (346) 586-58', ''),
+(15, 'Laudantium aliquip', 'Xavier Ortega', 'Aliqua Omnis quisqu', '+1 (624) 296-55', 'Female'),
+(16, 'Magni nemo voluptate', 'Nora Velez', 'Soluta sunt et eos a', '+1 (652) 139-17', 'Female'),
+(17, 'Tempora enim est si', 'kawsar', 'Modi cillum tempore', '+1 (349) 705-59', 'Male');
 
 -- --------------------------------------------------------
 
@@ -265,7 +291,8 @@ INSERT INTO `rooms` (`id`, `seater`, `room_no`, `fees`, `posting_date`) VALUES
 (3, 2, 200, 6000, '2025-01-01 22:45:43'),
 (4, 3, 112, 4000, '2025-01-01 22:45:43'),
 (6, 3, 145, 3000, '2025-01-01 22:45:43'),
-(7, 1, 122, 7000, '2025-12-09 14:48:45');
+(7, 1, 122, 7000, '2025-12-09 14:48:45'),
+(13, 2, 0, 5000, '2025-12-20 02:55:03');
 
 -- --------------------------------------------------------
 
@@ -411,6 +438,12 @@ ALTER TABLE `feedback`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `font`
+--
+ALTER TABLE `font`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `mill`
 --
 ALTER TABLE `mill`
@@ -475,7 +508,7 @@ ALTER TABLE `complaints`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `feedback`
@@ -484,10 +517,16 @@ ALTER TABLE `feedback`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `font`
+--
+ALTER TABLE `font`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `mill`
 --
 ALTER TABLE `mill`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `registration`
@@ -499,7 +538,7 @@ ALTER TABLE `registration`
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `states`
