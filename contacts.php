@@ -361,76 +361,7 @@
                             <input class="field textarea required" name="feedback" placeholder="Message"></input>
                             <button class="btn theme-element theme-element--accent" name="submit" type="submit">Submit</button>
                         </form>
-                        <?php
-                        $dbuser = "root";
-                        $dbpass = "";
-                        $host = "localhost";
-                        $db = "hostel2";
-                        $mysqli = new mysqli($host, $dbuser, $dbpass, $db);
-                        ?>
-                        <?php
-                        if (isset($_post['submit'])) {
-                            $name = $_POST['name'];
-                            $email = $_POST['email'];
-                            $feedback = $_POST['feedback'];
-
-                            $sql = "SELECT name FROM font where name=?";
-                            $stmt1 = $mysqli->prepare($sql);
-                            $stmt1->bind_param('i', $name);
-                            $stmt1->execute();
-                            $stmt1->store_result();
-                            $row_cnt = $stmt1->num_rows;;
-                            if ($row_cnt > 0) {
-                                echo "<script>alert('Not valid information');</script>";
-                            } else {
-                                $query = "insert into  font (name,email,message) values(?,?,?)";
-                                $stmt = $mysqli->prepare($query);
-                                $rc = $stmt->bind_param('iii', $name,  $email, $feedback);
-                                $stmt->execute();
-                                echo "<script>alert('Send successfully');</script>";
-                            }
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </section>
-<?php
-// 1. Database Configuration
-$servername = "localhost";
-$username = "root"; // Default for local servers
-$password = "";     // Default for local servers
-$dbname = "hostel2";
-
-// 2. Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// 3. Process Form Data
-if (isset($_POST['submit'])) {
-    echo "str";
-    // Sanitize input to prevent SQL Injection
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $message = mysqli_real_escape_string($conn, $_POST['message']);
-
-    // 4. SQL Query (ID is usually auto-incremented, so we omit it)
-    $sql = "INSERT INTO `font` (`name`, `email`, `message`) 
-            VALUES ('$name', '$email', '$message')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Appointment sent successfully!'); window.location.href='index.php';</script>";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-}
-
-$conn->close();
-?>
+                 
         <!-- contact form section end -->
     </main>
     <?php include_once('include/footer.php') ?>
