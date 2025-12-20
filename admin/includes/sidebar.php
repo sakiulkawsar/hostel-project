@@ -38,10 +38,10 @@
 						<!-- <li><a href="feedback-report.php">Feedbacks Report</a></li> -->
 					</ul>
 				</li>
-				<li><a href="#"><i class="fa fa-desktop" style="color: #fff;"></i> Mill</a>
+				<li><a href="#"><i class="fa fa-desktop" style="color: #fff;"></i> Meal</a>
 					<ul>
-						<li><a href="add-mill.php">Add mill</a></li>
-						<li><a href="manage-mill.php">Manage mill</a></li>
+						<li><a href="add-mill.php">Add meal</a></li>
+						<li><a href="manage-mill.php">Manage meal</a></li>
 						
 					</ul>
 				</li>

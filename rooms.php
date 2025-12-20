@@ -37,8 +37,8 @@
                         <div class="item-wrapper d-md-flex">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/download13.jfif" srcset="img/download13.jfif" />
-                                    <img class="lazy" data-src="img/download13.jfif" src="img/download13.jfif" alt="media" />
+                                    <source data-srcset="img/room4.webp"/>
+                                    <img class="lazy"alt="media" />
                                 </picture>
                             </div>
                             <div class="main d-md-flex justify-content-between">
@@ -73,8 +73,8 @@
                         <div class="item-wrapper d-md-flex">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/download14.jfif" srcset="img/download14.jfif" />
-                                    <img class="lazy" data-src="img/download14.jfif" src="img/download14.jfif" alt="media" />
+                                    <source data-srcset="img/room2.webp"  />
+                                    <img class="lazy" alt="media" />
                                 </picture>
                             </div>
                             <div class="main d-md-flex justify-content-between">
@@ -109,8 +109,8 @@
                         <div class="item-wrapper d-md-flex">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/download15.jfif" srcset="img/download15.jfif" />
-                                    <img class="lazy" data-src="img/download15.jfif" src="img/download15.jfif" alt="media" />
+                                    <source data-srcset="img/room5.webp"/>
+                                    <img class="lazy"  alt="media" />
                                 </picture>
                             </div>
                             <div class="main d-md-flex justify-content-between">
@@ -149,8 +149,8 @@
                         <div class="item-wrapper d-md-flex">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/download16.jfif" srcset="img/download16.jfif" />
-                                    <img class="lazy" data-src="img/download16.jfif" src="img/download16.jfif" alt="media" />
+                                    <source data-srcset="img/room6.webp"/>
+                                    <img class="lazy" alt="media" />
                                 </picture>
                             </div>
                             <div class="main d-md-flex justify-content-between">
@@ -185,8 +185,8 @@
                         <div class="item-wrapper d-md-flex">
                             <div class="media">
                                 <picture>
-                                    <source data-srcset="img/download17.jfif" srcset="img/img/download17.jfif" />
-                                    <img class="lazy" data-src="img/img/download17.jfif" src="img/img/download17.jfif" alt="media" />
+                                    <source data-srcset="img/room7.webp"  />
+                                    <img class="lazy" alt="media" />
                                 </picture>
                             </div>
                             <div class="main d-md-flex justify-content-between">

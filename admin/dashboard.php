@@ -291,13 +291,13 @@ $stmt2->close();
 												<div class="stat-panel text-center">
 <?php
 $result1 ="select count(*) from complaints where complaintStatus='Closed'";
-$stmt1 = $mysqli->prepare($result1);
+$stmt1 = $mysqli->prepare($result);
 $stmt1->execute();
 $stmt1->bind_result($count1);
 $stmt1->fetch();
 $stmt1->close();
 ?>												
-													<div class="stat-panel-number h1 "><?php echo $count1;?></div>
+													<div class="stat-panel-number h1 "><?php echo $count;?></div>
 													<div class="stat-panel-title text-uppercase">Closed Complaints </div>
 												</div>
 											</div>
@@ -321,6 +321,28 @@ $stmt2->close();
 												</div>
 											</div>
 											<a href="feedbacks.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
+										</div>
+									</div>
+
+																	<div class="col-md-4">
+										<div class="panel panel-success">
+											<div class="panel-body bk-info text-light">
+												<div class="stat-panel text-center">
+	
+
+<?php
+$result ="SELECT count(*) FROM mill ";
+$stmt = $mysqli->prepare($result);
+$stmt->execute();
+$stmt->bind_result($count);
+$stmt->fetch();
+$stmt->close()
+?>
+													<div class="stat-panel-number h1 "><?php echo $count;?></div>
+													<div class="stat-panel-title text-uppercase">Meal</div>
+												</div>
+											</div>
+											<a href="manage-mill.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									

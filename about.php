@@ -59,12 +59,12 @@
                             <div class="item-wrapper d-md-flex flex-column">
                                 <div class="media">
                                     <picture>
-                                        <source data-srcset="img/download9.jfif" srcset="img/download9.jfif" />
-                                        <img class="lazy" data-src="img/download9.jfif" src="img/download9.jfif" alt="media" />
+                                        <source data-srcset="img/room2.webp" />
+                                        <img class="lazy"  alt="media" />
                                     </picture>
                                     <span class="media_label media_label--pricing">
-                                        <span class="price h4">300</span>
-                                        / 1 night
+                                        <span class="price h4">6500 TK</span>
+                                        / 1 month
                                     </span>
                                 </div>
                                 <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
@@ -90,12 +90,12 @@
                             <div class="item-wrapper d-md-flex flex-column">
                                 <div class="media">
                                     <picture>
-                                        <source data-srcset="img/download8.jfif" srcset="img/download8.jfif" />
-                                        <img class="lazy" data-src="img/download8.jfif" src="img/download8.jfif" alt="media" />
+                                        <source data-srcset="img/room4.webp" />
+                                        <img class="lazy"alt="media" />
                                     </picture>
                                     <span class="media_label media_label--pricing">
-                                        <span class="price h4">500</span>
-                                        / 1 night
+                                        <span class="price h4">7000</span>
+                                        / 1 month
                                     </span>
                                 </div>
                                 <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
@@ -121,12 +121,12 @@
                             <div class="item-wrapper d-md-flex flex-column">
                                 <div class="media">
                                     <picture>
-                                        <source data-srcset="img/download7.jfif" srcset="img/download7.jfif" />
+                                        <source data-srcset="img/room5.webp"  />
                                         <img class="lazy" data-src="img/download7.jfif" src="img/download7.jfif" alt="media" />
                                     </picture>
                                     <span class="media_label media_label--pricing">
-                                        <span class="price h4">1000</span>
-                                        / 1 night
+                                        <span class="price h4">8000 Tk</span>
+                                        / 1 month
                                     </span>
                                 </div>
                                 <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
