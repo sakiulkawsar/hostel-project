@@ -31,6 +31,12 @@
 						<li><a href="all-complaints.php">All</a></li>
 					</ul>
 				</li>
+					<li><a href="#"><i class="fa fa-desktop" style="color: #fff;"></i> Pament</a>
+					<ul>
+						<li><a href="add-pament.php">Add pament</a></li>
+						<li><a href="manage-pament.php">Manage pament</a></li>
+					</ul>
+				</li>
 
 				<li><a href="#"><i class="fa fa-desktop" style="color: #fff;"></i> Feedback</a>
 					<ul>
