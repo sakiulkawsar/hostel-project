@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2025 at 07:48 AM
+-- Generation Time: Dec 21, 2025 at 05:18 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -215,6 +215,27 @@ INSERT INTO `mill` (`id`, `studentId`, `fullName`, `mill`, `phone`, `gender`) VA
 (15, 'Laudantium aliquip', 'Xavier Ortega', 'Aliqua Omnis quisqu', '+1 (624) 296-55', 'Female'),
 (16, 'Magni nemo voluptate', 'Nora Velez', 'Soluta sunt et eos a', '+1 (652) 139-17', 'Female'),
 (17, 'Tempora enim est si', 'kawsar', 'Modi cillum tempore', '+1 (349) 705-59', 'Male');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pament`
+--
+
+CREATE TABLE `pament` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `meal` varchar(50) NOT NULL,
+  `amount` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pament`
+--
+
+INSERT INTO `pament` (`id`, `name`, `meal`, `amount`) VALUES
+(1, 'kawsar', 'on', '2000'),
+(2, 'kawsar', 'off', '1500');
 
 -- --------------------------------------------------------
 
@@ -451,6 +472,12 @@ ALTER TABLE `mill`
   ADD UNIQUE KEY `studentId` (`studentId`);
 
 --
+-- Indexes for table `pament`
+--
+ALTER TABLE `pament`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `registration`
 --
 ALTER TABLE `registration`
@@ -527,6 +554,12 @@ ALTER TABLE `font`
 --
 ALTER TABLE `mill`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `pament`
+--
+ALTER TABLE `pament`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `registration`
