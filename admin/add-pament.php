@@ -87,19 +87,19 @@ if (isset($_POST['submit'])) {
                                 </div>
                             </div>
 
-                           
-                            </div>
 
-                            <div class="col-sm-8 col-sm-offset-2">
-                                <input type="submit" name="submit" value="Add Meal" class="btn btn-primary">
-                            </div>
-
-                        </form>
                     </div>
-                </div>
 
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <input type="submit" name="submit" value="Add Meal" class="btn btn-primary">
+                    </div>
+
+                    </form>
+                </div>
             </div>
+
         </div>
+    </div>
     </div>
     <!-- Loading Scripts -->
     <script src="js/jquery.min.js"></script>

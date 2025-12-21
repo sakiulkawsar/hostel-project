@@ -57,6 +57,7 @@ if(isset($_GET['del']))
 											<th>Name</th>
 											<th>Meal</th>
 											<th>Pament </th>
+											<th>Action</th>
 
 										</tr>
 									</thead>
@@ -67,6 +68,7 @@ if(isset($_GET['del']))
 											<th>Meal</th>
 										
 											<th>Pament </th>
+											<th>Action</th>
 											
 										</tr>
 									</tfoot>
@@ -79,20 +81,27 @@ $stmt= $mysqli->prepare($ret) ;
 $stmt->execute() ;//ok
 $res=$stmt->get_result();
 $cnt=1;
-while($row=$res->fetch_object())
-	  {
-	  	?>
-<tr><td><?php echo $cnt;;?></td>
-<td><?php echo $row->seater;?></td>
-<td><?php echo $row->room_no;?></td>
-<td><?php echo $row->fees;?></td>
-<td><?php echo $row->posting_date;?></td>
-<td><a href="edit-pament.php?id=<?php echo $row->id;?>"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-<a href="manage-pament.php?del=<?php echo $row->id;?>" onclick="return confirm("Do you want to delete");"><i class="fa fa-close"></i></a></td>
-										</tr>
-									<?php
-$cnt=$cnt+1;
-									 } ?>
+while($row = $res->fetch_object()) {
+?>
+<tr>
+    <td><?php echo $cnt; ?></td>
+    <td><?php echo $row->name; ?></td>
+    <td><?php echo $row->meal; ?></td>
+    <td><?php echo $row->amount; ?></td>
+    <td>
+        <a href="edit-pament.php?id=<?php echo $row->id; ?>">
+            <i class="fa fa-edit"></i>
+        </a>
+        &nbsp;&nbsp;
+        <a href="manage-pament.php?del=<?php echo $row->id; ?>"
+           onclick="return confirm('Do you want to delete?');">
+           <i class="fa fa-close"></i>
+        </a>
+    </td>
+</tr>
+<?php
+$cnt++;
+} ?>
 											
 										
 									</tbody>
