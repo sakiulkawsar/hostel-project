@@ -7,35 +7,41 @@ check_login();
 
 if (isset($_POST['submit'])) {
 
-    $studentId = trim($_POST['studentId']);
-    $fullName  = trim($_POST['fullName']);
-    $mill      = trim($_POST['mill']);
-    $phone     = trim($_POST['phone']);
-    $gender    = trim($_POST['gender']);
+    $name       = trim($_POST['name']);
+    $brackfast  = (int) $_POST['brackfast'];
+    $lunch      = (int) $_POST['lunch'];
+    $dinner     = (int) $_POST['dinner'];
+    $gender     = trim($_POST['gender']);
 
-    // Duplicate check
-    $sql = "SELECT id FROM mill WHERE studentId = ?";
-    $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("s", $studentId);
-    $stmt->execute();
-    $stmt->store_result();
+    // Daily total
+    $tmeal = $brackfast + $lunch + $dinner;
 
-    if ($stmt->num_rows > 0) {
-        $_SESSION['msg'] = "Student ID already exists";
+    // 🔹 Get previous tomeal if exists
+    $prev = $mysqli->prepare("SELECT tomeal FROM mill WHERE name=? ORDER BY id DESC LIMIT 1");
+    $prev->bind_param("s", $name);
+    $prev->execute();
+    $prev->bind_result($prev_tomeal);
+    $prev->fetch();
+    $prev->close();
+
+    // Cumulative total
+    $tomeal = $tmeal + (int)$prev_tomeal;
+
+    // Insert new row
+    $query = "INSERT INTO mill (name, brackfast, lunch, dinner, tmeal, tomeal, gender)
+              VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = $mysqli->prepare($query);
+    $stmt->bind_param("siiiiss", $name, $brackfast, $lunch, $dinner, $tmeal, $tomeal, $gender);
+
+    if ($stmt->execute()) {
+        $_SESSION['msg'] = "Mill added successfully";
     } else {
-
-        $query = "INSERT INTO mill (studentId, fullName, mill, phone, gender)
-                  VALUES (?, ?, ?, ?, ?)";
-        $stmt = $mysqli->prepare($query);
-        $stmt->bind_param("sssss", $studentId, $fullName, $mill, $phone, $gender);
-
-        if ($stmt->execute()) {
-            $_SESSION['msg'] = "Mill added successfully";
-        } else {
-            $_SESSION['msg'] = "Something went wrong";
-        }
+        $_SESSION['msg'] = "Something went wrong: " . $stmt->error;
     }
 }
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -79,32 +85,34 @@ if (isset($_POST['submit'])) {
                         <form method="post" class="form-horizontal">
 
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">Student ID</label>
+                                <label class="col-sm-2 control-label">Student Name</label>
                                 <div class="col-sm-8">
-                                    <input type="text" name="studentId" class="form-control" required>
+                                    <input type="text" name="name" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">Full Name</label>
+                                <label class="col-sm-2 control-label">Breakfast</label>
                                 <div class="col-sm-8">
-                                    <input type="text" name="fullName" class="form-control" required>
+                                    <input type="number" name="brackfast" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">Meal</label>
+                                <label class="col-sm-2 control-label">Lunch</label>
                                 <div class="col-sm-8">
-                                    <input type="text" name="mill" class="form-control" required>
+                                    <input type="number" name="lunch" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">Phone</label>
+                                <label class="col-sm-2 control-label">Dinner</label>
                                 <div class="col-sm-8">
-                                    <input type="text" name="phone" class="form-control" required>
+                                    <input type="number" name="dinner" class="form-control" required>
                                 </div>
                             </div>
+
+                          
 
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Gender</label>

@@ -67,10 +67,12 @@ if (isset($_GET['del'])) {
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Student ID</th>
-									<th>Full Name</th>
-									<th>Meal</th>
-									<th>Phone</th>
+									<th>Student Name</th>
+									<th>Breakfast</th>
+									<th>lunch</th>
+									<th>Dinner</th>
+									<th>Today meal</th>
+									<th>Total meal</th>
 									<th>Gender</th>
 									<th>Action</th>
 								</tr>
@@ -78,7 +80,7 @@ if (isset($_GET['del'])) {
 
 							<tbody>
 								<?php
-								$ret = "SELECT id, studentId, fullName, mill, phone, gender FROM mill";
+								$ret = "SELECT id, name, brackfast, lunch, dinner, tmeal,tomeal, gender FROM mill";
 								$stmt = $mysqli->prepare($ret);
 								$stmt->execute();
 								$res = $stmt->get_result();
@@ -90,10 +92,12 @@ if (isset($_GET['del'])) {
 								?>
 										<tr>
 											<td><?php echo $cnt; ?></td>
-											<td><?php echo htmlentities($row->studentId); ?></td>
-											<td><?php echo htmlentities($row->fullName); ?></td>
-											<td><?php echo htmlentities($row->mill); ?></td>
-											<td><?php echo htmlentities($row->phone); ?></td>
+											<td><?php echo htmlentities($row->name); ?></td>
+											<td><?php echo htmlentities($row->brackfast); ?></td>
+											<td><?php echo htmlentities($row->lunch); ?></td>
+											<td><?php echo htmlentities($row->dinner); ?></td>
+											<td><?php echo htmlentities($row->tmeal); ?></td>
+											<td><?php echo htmlentities($row->tomeal); ?></td>
 											<td><?php echo htmlentities($row->gender); ?></td>
 											<td>
 												<a href="edit-mill.php?id=<?php echo $row->id; ?>">

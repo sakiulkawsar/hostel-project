@@ -14,11 +14,13 @@ if (isset($_POST['submit'])) {
 
     $name   = $_POST['name'];
     $meal   = $_POST['meal'];
+    $due   =$_POST['due'];
     $amount = $_POST['amount'];
+    $tamount = $_POST['tamount'];
 
-    $query = "UPDATE pament SET name=?, meal=?, amount=? WHERE id=?";
+    $query = "UPDATE pament SET name=?, meal=?, due=?, amount=?, tamount=? WHERE id=?";
     $stmt = $mysqli->prepare($query);
-    $stmt->bind_param("ssii", $name, $meal, $amount, $id);
+    $stmt->bind_param("ssiiii", $name, $meal, $due, $amount, $tamount, $id);
     $stmt->execute();
 
     echo "<script>alert('Payment Details Updated Successfully');</script>";
@@ -59,7 +61,7 @@ $row = $res->fetch_object();
         </div>
 
         <div class="form-group">
-            <label class="col-sm-2 control-label">Meal</label>
+            <label class="col-sm-2 control-label">Total meal</label>
             <div class="col-sm-8">
                 <input type="text" name="meal"
                        value="<?php echo $row->meal; ?>"
@@ -67,10 +69,28 @@ $row = $res->fetch_object();
             </div>
         </div>
 
+           <div class="form-group">
+            <label class="col-sm-2 control-label">Due amount</label>
+            <div class="col-sm-8">
+                <input type="number" name="due"
+                       value="<?php echo $row->due; ?>"
+                       class="form-control" required>
+            </div>
+        </div>
+
         <div class="form-group">
-            <label class="col-sm-2 control-label">Amount</label>
+            <label class="col-sm-2 control-label">Current amount</label>
             <div class="col-sm-8">
                 <input type="number" name="amount"
+                       value="<?php echo $row->amount; ?>"
+                       class="form-control" required>
+            </div>
+        </div>
+
+         <div class="form-group">
+            <label class="col-sm-2 control-label">Total amount</label>
+            <div class="col-sm-8">
+                <input type="number" name="tamount"
                        value="<?php echo $row->amount; ?>"
                        class="form-control" required>
             </div>

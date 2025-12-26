@@ -31,10 +31,11 @@
 						<li><a href="all-complaints.php">All</a></li>
 					</ul>
 				</li>
-					<li><a href="#"><i class="fa fa-desktop" style="color: #fff;"></i> Pament</a>
+					<li><a href="#"><i class="fa fa-desktop" style="color: #fff;"></i> Payment</a>
 					<ul>
-						<li><a href="add-pament.php">Add pament</a></li>
-						<li><a href="manage-pament.php">Manage pament</a></li>
+						<li><a href="add_payment.php">Add payment</a></li>
+						<li><a href="manage-pament.php">Manage payment</a></li>
+						<li><a href="view.php">View payment</a></li>
 					</ul>
 				</li>
 

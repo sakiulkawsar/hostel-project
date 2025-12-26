@@ -7,23 +7,27 @@ check_login();
 if (isset($_POST['submit'])) {
 
     $id        = $_GET['id'];
-    $studentId = $_POST['studentId'];
-    $fullName  = $_POST['fullName'];
-    $mill      = $_POST['mill'];
-    $phone     = $_POST['phone'];
+    $name = $_POST['name'];
+    $brackfast  = $_POST['brackfast'];
+    $lunch      = $_POST['lunch'];
+    $dinner     = $_POST['dinner'];
+    $tmeal     = $_POST['tmeal'];
+    $tomeal     = $_POST['tomeal'];
     $gender    = $_POST['gender'];
 
     $query = "UPDATE mill 
-              SET studentId=?, fullName=?, mill=?, phone=?, gender=?
+              SET name=?, brackfast=?, lunch=?, dinner=?, tmeal=?, tomeal=?, gender=?
               WHERE id=?";
 
     $stmt = $mysqli->prepare($query);
     $stmt->bind_param(
-        'sssssi',
-        $studentId,
-        $fullName,
-        $mill,
-        $phone,
+        'siiiiiii',
+        $name,
+        $brackfast,
+        $lunch,
+        $dinner,
+        $tmeal,
+        $tomeal,
         $gender,
         $id
     );
@@ -94,34 +98,51 @@ if (isset($_GET['id'])) {
 									<form method="post" class="form-horizontal">
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Student ID</label>
+<label class="col-sm-2 control-label">Student Name</label>
 <div class="col-sm-8">
-<input type="text" name="studentId" class="form-control"
-value="<?php echo $row->studentId; ?>">
+<input type="text" name="name" class="form-control"
+value="<?php echo $row->name; ?>">
 </div>
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Full Name</label>
+<label class="col-sm-2 control-label">Breakfast</label>
 <div class="col-sm-8">
-<input type="text" name="fullName" class="form-control"
-value="<?php echo $row->fullName; ?>">
+<input type="number" name="brackfast" class="form-control"
+value="<?php echo $row->brackfast; ?>">
 </div>
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Mill</label>
+<label class="col-sm-2 control-label">Lunch</label>
 <div class="col-sm-8">
-<input type="text" name="mill" class="form-control"
-value="<?php echo $row->mill; ?>">
+<input type="number" name="Lunch" class="form-control"
+value="<?php echo $row->lunch; ?>">
 </div>
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 control-label">Phone</label>
+<label class="col-sm-2 control-label">Dinner</label>
 <div class="col-sm-8">
-<input type="text" name="phone" class="form-control"
-value="<?php echo $row->phone; ?>">
+<input type="number" name="dinner" class="form-control"
+value="<?php echo $row->dinner; ?>">
+</div>
+</div>
+
+
+<div class="form-group">
+<label class="col-sm-2 control-label">Today total meal</label>
+<div class="col-sm-8">
+<input type="number" name="tmeal" class="form-control"
+value="<?php echo $row->tmeal; ?>">
+</div>
+</div>
+
+<div class="form-group">
+<label class="col-sm-2 control-label">Total meal</label>
+<div class="col-sm-8">
+<input type="number" name="tomeal" class="form-control"
+value="<?php echo $row->tomeal; ?>">
 </div>
 </div>
 

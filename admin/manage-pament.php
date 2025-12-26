@@ -7,9 +7,9 @@ check_login();
 if(isset($_GET['del']))
 {
 	$id=intval($_GET['del']);
-	$adn="delete from pament where name=?";
-		$stmt= $mysqli->prepare($adn);
-		$stmt->bind_param('i',$id);
+	$adn = "DELETE FROM pament WHERE id = ?";
+$stmt = $mysqli->prepare($adn);
+$stmt->bind_param('i', $id);
         $stmt->execute();
         $stmt->close();	   
         echo "<script>alert('Data Deleted');</script>" ;
@@ -45,9 +45,9 @@ if(isset($_GET['del']))
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						<h2 class="page-title" style="margin-top: 4%">Manage pament</h2>
+						<h2 class="page-title" style="margin-top: 4%">Manage payment</h2>
 						<div class="panel panel-default">
-							<div class="panel-heading">All pament Details</div>
+							<div class="panel-heading">All payment Details</div>
 							<div class="panel-body">
 								<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
 									<thead>
@@ -55,19 +55,23 @@ if(isset($_GET['del']))
 											<th>Sno.</th>
 										
 											<th>Name</th>
-											<th>Meal</th>
-											<th>Pament </th>
+											<th>Total meal</th>
+											<th>Due amount </th>
+											<th>Meal rate </th>
+											<th>Total amount </th>
 											<th>Action</th>
 
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
-											<th>Sno.</th>
-											<th>Name</th>
-											<th>Meal</th>
+												<th>Sno.</th>
 										
-											<th>Pament </th>
+											<th>Name</th>
+											<th>Total meal</th>
+											<th>Due amount </th>
+											<th>Meal rate </th>
+											<th>Total amount </th>
 											<th>Action</th>
 											
 										</tr>
@@ -87,7 +91,9 @@ while($row = $res->fetch_object()) {
     <td><?php echo $cnt; ?></td>
     <td><?php echo $row->name; ?></td>
     <td><?php echo $row->meal; ?></td>
+    <td><?php echo $row->due; ?></td>
     <td><?php echo $row->amount; ?></td>
+    <td><?php echo $row->tamount; ?></td>
     <td>
         <a href="edit-pament.php?id=<?php echo $row->id; ?>">
             <i class="fa fa-edit"></i>
