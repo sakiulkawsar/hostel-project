@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2025 at 05:18 AM
+-- Generation Time: Dec 26, 2025 at 06:35 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -191,10 +191,12 @@ INSERT INTO `font` (`id`, `name`, `email`, `message`) VALUES
 
 CREATE TABLE `mill` (
   `id` int(11) NOT NULL,
-  `studentId` varchar(20) NOT NULL,
-  `fullName` varchar(100) NOT NULL,
-  `mill` varchar(50) NOT NULL,
-  `phone` varchar(15) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `brackfast` int(100) NOT NULL,
+  `lunch` int(50) NOT NULL,
+  `dinner` int(15) NOT NULL,
+  `tmeal` int(11) NOT NULL,
+  `tomeal` int(11) NOT NULL,
   `gender` enum('Male','Female','Other') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -202,19 +204,14 @@ CREATE TABLE `mill` (
 -- Dumping data for table `mill`
 --
 
-INSERT INTO `mill` (`id`, `studentId`, `fullName`, `mill`, `phone`, `gender`) VALUES
-(1, 'Ut reprehenderit vel', 'rohim', 'Quis voluptatem susc', '+1 (474) 883-64', 'Male'),
-(3, 'Facilis cupiditate t', 'saddam', 'Dolor nihil sint lab', '+1 (788) 195-69', 'Male'),
-(6, 'Accusamus deserunt u', 'sojib', 'Enim nulla distincti', '+1 (207) 189-49', 'Male'),
-(7, 'Libero nulla irure q', 'Nolan Griffith', 'Atque eaque enim dol', '+1 (438) 933-23', ''),
-(8, 'Ipsa ipsa consequa', 'Willow Ross', 'Magni aperiam dolori', '+1 (477) 228-32', 'Male'),
-(9, 'Molestiae tempore n', 'Reagan Woodard', 'Saepe consectetur mi', '+1 (446) 561-36', ''),
-(10, 'Nostrum eveniet et ', 'Berk Bender', 'Accusamus assumenda ', '+1 (952) 534-63', 'Male'),
-(13, '101', 'kawsar', 'Ipsum ut dolor odio ', '+1 (503) 186-22', 'Male'),
-(14, 'Qui dicta aut deseru', 'Fletcher Glenn', 'Irure eligendi elit', '+1 (346) 586-58', ''),
-(15, 'Laudantium aliquip', 'Xavier Ortega', 'Aliqua Omnis quisqu', '+1 (624) 296-55', 'Female'),
-(16, 'Magni nemo voluptate', 'Nora Velez', 'Soluta sunt et eos a', '+1 (652) 139-17', 'Female'),
-(17, 'Tempora enim est si', 'kawsar', 'Modi cillum tempore', '+1 (349) 705-59', 'Male');
+INSERT INTO `mill` (`id`, `name`, `brackfast`, `lunch`, `dinner`, `tmeal`, `tomeal`, `gender`) VALUES
+(6, 'Accusamus deserunt u', 0, 0, 1, 0, 0, 'Male'),
+(8, 'Ipsa ipsa consequa', 0, 0, 1, 0, 0, 'Male'),
+(10, 'Nostrum eveniet et ', 0, 0, 1, 0, 0, 'Male'),
+(13, '101', 0, 3, 1, 0, 0, 'Male'),
+(20, 'sakiul', 1, 0, 4, 7, 7, ''),
+(22, 'kawsar', 2, 0, 1, 3, 6, ''),
+(23, 'ruhul', 1, 3, 4, 8, 8, 'Female');
 
 -- --------------------------------------------------------
 
@@ -226,16 +223,26 @@ CREATE TABLE `pament` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `meal` varchar(50) NOT NULL,
-  `amount` varchar(50) NOT NULL
+  `due` varchar(20) NOT NULL,
+  `amount` varchar(50) NOT NULL,
+  `tamount` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pament`
 --
 
-INSERT INTO `pament` (`id`, `name`, `meal`, `amount`) VALUES
-(1, 'kawsar', 'on', '2000'),
-(2, 'kawsar', 'off', '1500');
+INSERT INTO `pament` (`id`, `name`, `meal`, `due`, `amount`, `tamount`) VALUES
+(4, 'Mikayla Newton', 'Ex dolor delectus e', '', '50', 0),
+(5, 'sakiul', '20', '', '3000', 0),
+(6, 'hormi', 'Nostrud dolores sunt', '', '8005', 0),
+(7, 'Rina Wooten', 'Veniam asperiores e', '', '4000', 0),
+(8, 'Shea Knowles', '40', '300', '1500', 6000),
+(14, 'korim', '20', '300', '400', 8000),
+(15, 'bahar', '40', '400', '20', 10),
+(16, 'rohim', '20', '400', '20', 800),
+(17, 'sakiul', '20', '500', '50', 1500),
+(18, 'rohim', '40', '500', '40', 2100);
 
 -- --------------------------------------------------------
 
@@ -469,7 +476,7 @@ ALTER TABLE `font`
 --
 ALTER TABLE `mill`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `studentId` (`studentId`);
+  ADD UNIQUE KEY `studentId` (`name`);
 
 --
 -- Indexes for table `pament`
@@ -553,13 +560,13 @@ ALTER TABLE `font`
 -- AUTO_INCREMENT for table `mill`
 --
 ALTER TABLE `mill`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `pament`
 --
 ALTER TABLE `pament`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `registration`
