@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2025 at 06:35 PM
+-- Generation Time: Dec 28, 2025 at 07:30 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -211,7 +211,35 @@ INSERT INTO `mill` (`id`, `name`, `brackfast`, `lunch`, `dinner`, `tmeal`, `tome
 (13, '101', 0, 3, 1, 0, 0, 'Male'),
 (20, 'sakiul', 1, 0, 4, 7, 7, ''),
 (22, 'kawsar', 2, 0, 1, 3, 6, ''),
-(23, 'ruhul', 1, 3, 4, 8, 8, 'Female');
+(23, 'ruhul', 1, 3, 4, 8, 8, 'Female'),
+(24, 'kaw', 1, 0, 3, 6, 6, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `address` text DEFAULT NULL,
+  `status` varchar(10) DEFAULT NULL,
+  `transaction_id` varchar(255) DEFAULT NULL,
+  `currency` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `name`, `email`, `phone`, `amount`, `address`, `status`, `transaction_id`, `currency`) VALUES
+(1, 'John Doe', 'john.doe@email.com', '01711111111', 0, 'Dhaka', 'Pending', 'SSLCZ_TEST_6951764487423', 'BDT'),
+(2, 'John Doe', 'you@example.com', '01711xxxxxx', 1200, 'Dhaka', 'Pending', 'SSLCZ_TEST_695176605ee69', 'BDT'),
+(3, 'John Doe', 'you@example.com', '01711xxxxxx', 1200, 'Dhaka', 'Pending', 'SSLCZ_TEST_695176bbce6f3', 'BDT');
 
 -- --------------------------------------------------------
 
@@ -222,7 +250,7 @@ INSERT INTO `mill` (`id`, `name`, `brackfast`, `lunch`, `dinner`, `tmeal`, `tome
 CREATE TABLE `pament` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `meal` varchar(50) NOT NULL,
+  `tmeal` varchar(50) NOT NULL,
   `due` varchar(20) NOT NULL,
   `amount` varchar(50) NOT NULL,
   `tamount` int(20) NOT NULL
@@ -232,17 +260,31 @@ CREATE TABLE `pament` (
 -- Dumping data for table `pament`
 --
 
-INSERT INTO `pament` (`id`, `name`, `meal`, `due`, `amount`, `tamount`) VALUES
-(4, 'Mikayla Newton', 'Ex dolor delectus e', '', '50', 0),
-(5, 'sakiul', '20', '', '3000', 0),
-(6, 'hormi', 'Nostrud dolores sunt', '', '8005', 0),
-(7, 'Rina Wooten', 'Veniam asperiores e', '', '4000', 0),
-(8, 'Shea Knowles', '40', '300', '1500', 6000),
-(14, 'korim', '20', '300', '400', 8000),
-(15, 'bahar', '40', '400', '20', 10),
+INSERT INTO `pament` (`id`, `name`, `tmeal`, `due`, `amount`, `tamount`) VALUES
+(14, 'korim', '40', '300', '400', 400),
+(15, 'bahar', '50', '400', '40', 40),
 (16, 'rohim', '20', '400', '20', 800),
 (17, 'sakiul', '20', '500', '50', 1500),
-(18, 'rohim', '40', '500', '40', 2100);
+(18, 'rohim', '40', '500', '40', 2100),
+(19, 'ruhul', '30', '400', '40', 1600),
+(21, 'sakiul@', '40', '500', '40', 40),
+(22, 'hormi', '40', '500', '40', 2100),
+(23, 'abdur rahoman', '233', '332', '2500', 33),
+(24, 'Shea Knowles', '50', '2000', '40', 4000);
+
+--
+-- Triggers `pament`
+--
+DELIMITER $$
+CREATE TRIGGER `trg_update_mill_tmeal` AFTER UPDATE ON `pament` FOR EACH ROW BEGIN
+    IF OLD.tmeal <> NEW.tmeal THEN
+        UPDATE mill
+        SET tmeal = NEW.tmeal
+        WHERE name = NEW.name;
+    END IF;
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -479,6 +521,12 @@ ALTER TABLE `mill`
   ADD UNIQUE KEY `studentId` (`name`);
 
 --
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pament`
 --
 ALTER TABLE `pament`
@@ -560,13 +608,19 @@ ALTER TABLE `font`
 -- AUTO_INCREMENT for table `mill`
 --
 ALTER TABLE `mill`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pament`
 --
 ALTER TABLE `pament`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `registration`

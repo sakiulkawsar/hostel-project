@@ -90,7 +90,7 @@ while($row = $res->fetch_object()) {
 <tr>
     <td><?php echo $cnt; ?></td>
     <td><?php echo $row->name; ?></td>
-    <td><?php echo $row->meal; ?></td>
+    <td><?php echo $row->tmeal; ?></td>
     <td><?php echo $row->due; ?></td>
     <td><?php echo $row->amount; ?></td>
     <td><?php echo $row->tamount; ?></td>

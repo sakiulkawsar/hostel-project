@@ -8,18 +8,18 @@ check_login();
 if (isset($_POST['submit'])) {
 
     $name   = trim($_POST['name']);
-    $meal   = (int) $_POST['meal'];
+    $tmeal   = (int) $_POST['tmeal'];
     $due    = (float) $_POST['due'];
     $amount = (float) $_POST['amount'];
 
     // 🔥 AUTO CALCULATION
-    $tamount =($meal * $amount) + $due;
+    $tamount =($tmeal * $amount) + $due;
 
-    $query = "INSERT INTO pament (name, meal, due, amount, tamount)
+    $query = "INSERT INTO pament (name, tmeal, due, amount, tamount)
               VALUES (?, ?, ?, ?, ?)";
 
     $stmt = $mysqli->prepare($query);
-    $stmt->bind_param("siddd", $name, $meal, $due, $amount, $tamount);
+    $stmt->bind_param("siddd", $name, $tmeal, $due, $amount, $tamount);
 
     if ($stmt->execute()) {
         $_SESSION['msg'] = "Payment added successfully";
@@ -81,7 +81,7 @@ if (isset($_POST['submit'])) {
     <div class="form-group">
         <label class="col-sm-2 control-label">Meal:</label>
         <div class="col-sm-8">
-            <input type="text" name="meal" class="form-control" required>
+            <input type="text" name="tmeal" class="form-control" required>
         </div>
     </div>
 
